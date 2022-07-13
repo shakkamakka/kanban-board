@@ -3,8 +3,9 @@
 
 $appleBlue: #32af9f;
 $green: #44c767;
+$gray50: #fbfffe;
 $gray100: #f0f4f3;
-$gray400: #a0aec0;
+$gray400: #999;
 
 $boxshadowS: 0 0 1px rgba(0, 0, 0, 0.5);
 $boxshadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
@@ -12,6 +13,23 @@ $boxshadowXL: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 $font1: "Neucha", cursive;
 $font2: "Mukta Vaani", sans-serif;
 $lineargradient: linear-gradient(to bottom, $green 5%, $appleBlue 100%);
+
+@mixin button() {
+	border: none;
+	font-family: $font2;
+	font-size: 1.6rem;
+	padding: 0 2rem;
+	border-radius: 2rem;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	cursor: pointer;
+	& svg {
+		margin-right: 1rem;
+		height: 2rem;
+		width: 2rem;
+	}
+}
 
 *,
 html {
@@ -30,7 +48,7 @@ html {
 	border: 1px solid black;
 	display: block;
 	font-size: 1.6rem;
-	font-family: font2;
+	font-family: $font2;
 	color: $gray400;
 	min-height: 100%;
 }
@@ -51,23 +69,58 @@ h1 {
 	justify-content: space-between;
 }
 button.btn_primary {
+	@include button();
 	background: $lineargradient;
 	color: white;
-	border: none;
-	font-family: $font2;
-	font-size: 1.6rem;
-	padding: 0 2rem;
-	border-radius: 2rem;
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	& svg {
-		margin-right: 1rem;
-		height: 2rem;
-		width: 2rem;
-	}
 	&:hover {
 		background: $appleBlue;
-		cursor: pointer;
+	}
+}
+button.btn_secondary {
+	@include button();
+	background: none;
+	color: $appleBlue;
+	border: 1px solid $appleBlue;
+	&:hover {
+		color: $green;
+		border: 1px solid $green;
+	}
+}
+.row {
+	display: flex;
+	flex-wrap: nowrap;
+	margin: 2rem 1rem;
+	justify-content: space-evenly;
+}
+.column {
+	width: 25%;
+	margin: 1rem;
+	background: rgba(255, 255, 255, 0.2);
+	box-shadow: $boxshadowS;
+	border-radius: 0.5rem;
+	padding: 1rem;
+	position: relative;
+	&::before {
+		content: "";
+		position: absolute;
+		height: 4px;
+		top: 0;
+		left: 0;
+		width: 100%;
+		background: $lineargradient;
+	}
+}
+.card {
+	border-radius: 0.5rem;
+	display: flex;
+	justify-content: space-between;
+	background: #fff;
+	padding: 2rem;
+	box-shadow: $boxshadow;
+	transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+	min-height: 10rem;
+	margin-top: 1.5rem;
+	.title {
+		font-weight: 200;
 	}
 }

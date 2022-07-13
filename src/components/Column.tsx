@@ -1,8 +1,8 @@
-import React from 'react'
 
-const Column = () => {
+
+const Column = ({children}:any) => {
   return (
-    <div className='column'>Column</div>
+    <div className='column'>{children}</div>
   )
 }
 
