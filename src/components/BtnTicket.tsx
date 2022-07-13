@@ -1,4 +1,4 @@
-import React from 'react'
+
 import {TiTicket} from "react-icons/ti"
 
 const BtnTicket = () => {
