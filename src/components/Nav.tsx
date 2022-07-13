@@ -1,10 +1,11 @@
 import {Link} from 'react-router-dom';
+import {BtnTicket} from '.';
 
 const Nav = () => {
   return (
     <nav className='nav'>
-      <div className='nav-logo'></div>
-      <Link to="/">Dashboard</Link>
+      <Link to="/"><h1>kanban board</h1></Link>
+      <BtnTicket />
     </nav>
   )
 }

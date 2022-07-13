@@ -1,4 +1,5 @@
-import Nav from "./nav"
+import Nav from "./Nav";
+import BtnTicket from "./BtnTicket";
 
 
-export { Nav }
+export { Nav, BtnTicket }

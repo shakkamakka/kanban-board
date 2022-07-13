@@ -1,41 +1,73 @@
+@import url("https://fonts.googleapis.com/css2?family=Neucha&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Mukta+Vaani:wght@200;300;700&display=swap");
+
+$appleBlue: #32af9f;
+$green: #44c767;
+$gray100: #f0f4f3;
+$gray400: #a0aec0;
+
+$boxshadowS: 0 0 1px rgba(0, 0, 0, 0.5);
+$boxshadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+$boxshadowXL: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+$font1: "Neucha", cursive;
+$font2: "Mukta Vaani", sans-serif;
+$lineargradient: linear-gradient(to bottom, $green 5%, $appleBlue 100%);
+
+*,
+html {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+html {
+	font-size: 10px;
+}
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+	min-height: 100vh;
+	background-color: $gray100;
 }
-
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
+.container {
+	border: 1px solid black;
+	display: block;
+	font-size: 1.6rem;
+	font-family: font2;
+	color: $gray400;
+	min-height: 100%;
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+a {
+	text-decoration: none;
+	color: $appleBlue;
 }
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+h1 {
+	font-size: 3rem;
+	font-family: $font1;
+	letter-spacing: 1px;
 }
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.nav {
+	padding: 2rem;
+	background: white;
+	box-shadow: $boxshadowS;
+	display: flex;
+	justify-content: space-between;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
+button.btn_primary {
+	background: $lineargradient;
+	color: white;
+	border: none;
+	font-family: $font2;
+	font-size: 1.6rem;
+	padding: 0 2rem;
+	border-radius: 2rem;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	& svg {
+		margin-right: 1rem;
+		height: 2rem;
+		width: 2rem;
+	}
+	&:hover {
+		background: $appleBlue;
+		cursor: pointer;
+	}
 }
