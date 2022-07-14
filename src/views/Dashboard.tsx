@@ -8,7 +8,7 @@ const Dashboard = () => {
     <div className='dashboard'>
       <Row>
         {status.map((s)=>
-        <Column key={s.id} title={s.value}>          
+        <Column key={s.id} title={s.value} count={tickets.filter((t)=>s.id === t.status).length}>          
           {tickets.filter((t)=>s.id === t.status).map((ticket)=> <Card key={ticket.id} {...ticket} />)}
         </Column>
         )}
