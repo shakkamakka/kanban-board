@@ -1,8 +1,15 @@
+type ColumnProps={
+  title: string,
+  children?: React.ReactNode
+}
 
 
-const Column = ({children}:any) => {
+const Column:React.FC<ColumnProps>= ({title, children}) => {
   return (
-    <div className='column'>{children}</div>
+    <div className='column'>
+      <h3>{title}</h3>
+      {children}
+    </div>
   )
 }
 
