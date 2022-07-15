@@ -1,0 +1,86 @@
+{
+  "status": [
+    {
+      "id": 1,
+      "value": "Backlog"
+    },
+    {
+      "id": 2,
+      "value": "To do"
+    },
+    {
+      "id": 3,
+      "value": "In Progress"
+    },
+    {
+      "id": 4,
+      "value": "Testing"
+    },
+    {
+      "id": 5,
+      "value": "Done"
+    }
+  ],
+  "tickets": [
+    {
+      "id": 1,
+      "title": "ticket 1",
+      "description": "description",
+      "status": 1
+    },
+    {
+      "id": 2,
+      "title": "ticket 2",
+      "description": "description",
+      "status": 2
+    },
+    {
+      "id": 3,
+      "title": "ticket 3",
+      "description": "description",
+      "status": 3
+    },
+    {
+      "id": 4,
+      "title": "ticket 4",
+      "description": "description",
+      "status": 4
+    },
+    {
+      "id": 5,
+      "title": "ticket 5",
+      "description": "description",
+      "status": 5
+    },
+    {
+      "id": 6,
+      "title": "ticket 61",
+      "description": "description",
+      "status": 1
+    },
+    {
+      "id": 7,
+      "title": "ticket 7",
+      "description": "description",
+      "status": 2
+    },
+    {
+      "id": 8,
+      "title": "ticket 8",
+      "description": "description",
+      "status": 3
+    },
+    {
+      "id": 9,
+      "title": "ticket 9",
+      "description": "description",
+      "status": 4
+    },
+    {
+      "id": 10,
+      "title": "ticket 10",
+      "description": "description",
+      "status": 5
+    }
+  ]
+}
