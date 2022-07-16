@@ -1,7 +1,4 @@
-import Dashboard from './Dashboard';
+import Dashboard from "./Dashboard";
 import Ticket from "./Ticket";
 
-export {
-  Dashboard,
-  Ticket
-}
+export { Dashboard, Ticket };

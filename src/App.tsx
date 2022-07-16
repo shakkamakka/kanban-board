@@ -1,7 +1,7 @@
-import './App.scss';
-import { Route, Routes } from 'react-router-dom';
-import { Dashboard, Ticket } from './views';
-import { Nav } from './components';
+import "./App.scss";
+import { Route, Routes } from "react-router-dom";
+import { Dashboard, Ticket } from "./views";
+import { Nav } from "./components";
 
 function App() {
   return (

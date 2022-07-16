@@ -4,4 +4,4 @@ import Row from "./Row";
 import Card from "./Card";
 import List from "./List";
 
-export { Nav, BtnTicket, Row, Card, List }
+export { Nav, BtnTicket, Row, Card, List };

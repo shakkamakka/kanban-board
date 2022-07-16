@@ -1,24 +1,29 @@
-
-import { Row, List } from '../components'
-import useFetch from '../hooks/useFetch';
-
+import { Row, List } from "../components";
+import useFetch from "../hooks/useFetch";
 
 const Dashboard = () => {
-  const {data: dataStatuses, isLoading, error} = useFetch("https://my-json-server.typicode.com/shakkamakka/data/status")
+  const {
+    data: dataStatuses,
+    isLoading,
+    error,
+  } = useFetch("https://my-json-server.typicode.com/shakkamakka/data/status");
 
-  interface statusProps{
-    id:number;
-    value:string
+  interface statusProps {
+    id: number;
+    value: string;
   }
   return (
-    <div className='dashboard'>
+    <div className="dashboard">
       <Row>
         {isLoading && <div>loading...</div>}
-        {error && <div>{ error }</div>}
-        {dataStatuses && dataStatuses.map((s:statusProps)=> <List key= {s.id} id={s.id} value={s.value} />)}
+        {error && <div>{error}</div>}
+        {dataStatuses &&
+          dataStatuses.map((s: statusProps) => (
+            <List key={s.id} id={s.id} value={s.value} />
+          ))}
       </Row>
     </div>
-  )
-}
+  );
+};
 
-export default Dashboard
+export default Dashboard;
