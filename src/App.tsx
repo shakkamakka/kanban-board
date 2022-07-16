@@ -1,10 +1,9 @@
-import './App.scss'
-import { Route, Routes} from 'react-router-dom';
-import {Dashboard, Ticket} from './views/';
+import './App.scss';
+import { Route, Routes } from 'react-router-dom';
+import { Dashboard, Ticket } from './views';
 import { Nav } from './components';
 
 function App() {
-
   return (
     <div className="container">
       <Nav />
@@ -13,7 +12,7 @@ function App() {
         <Route path="/ticket/:id" element={<Ticket />} />
       </Routes>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
