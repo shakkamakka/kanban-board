@@ -1,5 +1,4 @@
 
-import { useEffect, useState } from 'react'
 import { Row, List } from '../components'
 import useFetch from '../hooks/useFetch';
 
@@ -11,13 +10,6 @@ const Dashboard = () => {
     id:number;
     value:string
   }
-  interface ticketProps{
-    id:number;
-    title:string;
-    status: number;
-    description:string
-  }
-
   return (
     <div className='dashboard'>
       <Row>
