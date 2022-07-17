@@ -21,66 +21,84 @@
       "value": "Done"
     }
   ],
-  "tickets": [
+  "tasks": [
     {
       "id": 1,
-      "title": "ticket 1",
-      "description": "description",
+      "title": "Aliquam ultricies facilisis vestibulum.",
+      "Ut sagittis laoreet orci, et fringilla nibh condimentum in. Sed mattis non turpis sit amet sagittis. Fusce enim tellus, gravida ac laoreet sed, feugiat sed ligula. Duis faucibus justo quis tristique luctus. Nullam auctor elit sed velit consectetur, at venenatis ex tempus.": "Ut sagittis laoreet orci, et fringilla nibh condimentum in. Sed mattis non turpis sit amet sagittis. Fusce enim tellus, gravida ac laoreet sed, feugiat sed ligula. Duis faucibus justo quis tristique luctus. Nullam auctor elit sed velit consectetur, at venenatis ex tempus.",
       "status": 1
     },
     {
       "id": 2,
-      "title": "ticket 2",
-      "description": "description",
+      "title": "Nulla iaculis nulla et scelerisque iaculis",
+      "Ut sagittis laoreet orci, et fringilla nibh condimentum in. Sed mattis non turpis sit amet sagittis. Fusce enim tellus, gravida ac laoreet sed, feugiat sed ligula. Duis faucibus justo quis tristique luctus. Nullam auctor elit sed velit consectetur, at venenatis ex tempus.": "Nulla iaculis nulla et scelerisque iaculis.",
       "status": 2
     },
     {
       "id": 3,
-      "title": "ticket 3",
-      "description": "description",
+      "title": "Nunc eget vehicula velit",
+      "Ut sagittis laoreet orci, et fringilla nibh condimentum in. Sed mattis non turpis sit amet sagittis. Fusce enim tellus, gravida ac laoreet sed, feugiat sed ligula. Duis faucibus justo quis tristique luctus. Nullam auctor elit sed velit consectetur, at venenatis ex tempus.": "Ut sagittis laoreet orci, et fringilla nibh condimentum in. Sed mattis non turpis sit amet sagittis. Fusce enim tellus, gravida ac laoreet sed, feugiat sed ligula. Duis faucibus justo quis tristique luctus. Nullam auctor elit sed velit consectetur, at venenatis ex tempus.",
       "status": 3
     },
     {
       "id": 4,
-      "title": "ticket 4",
-      "description": "description",
-      "status": 4
+      "title": "Aliquam ultricies facilisis vestibulum.",
+      "Ut sagittis laoreet orci, et fringilla nibh condimentum in. Sed mattis non turpis sit amet sagittis. Fusce enim tellus, gravida ac laoreet sed, feugiat sed ligula. Duis faucibus justo quis tristique luctus. Nullam auctor elit sed velit consectetur, at venenatis ex tempus.": "Ut sagittis laoreet orci, et fringilla nibh condimentum in. Sed mattis non turpis sit amet sagittis. Fusce enim tellus, gravida ac laoreet sed, feugiat sed ligula. Duis faucibus justo quis tristique luctus. Nullam auctor elit sed velit consectetur, at venenatis ex tempus.",
+      "status": 3
     },
     {
       "id": 5,
-      "title": "ticket 5",
-      "description": "description",
+      "title": "Aliquam ultricies facilisis vestibulum.",
+      "Ut sagittis laoreet orci, et fringilla nibh condimentum in. Sed mattis non turpis sit amet sagittis. Fusce enim tellus, gravida ac laoreet sed, feugiat sed ligula. Duis faucibus justo quis tristique luctus. Nullam auctor elit sed velit consectetur, at venenatis ex tempus.": "Ut sagittis laoreet orci, et fringilla nibh condimentum in. Sed mattis non turpis sit amet sagittis. Fusce enim tellus, gravida ac laoreet sed, feugiat sed ligula. Duis faucibus justo quis tristique luctus. Nullam auctor elit sed velit consectetur, at venenatis ex tempus.",
       "status": 5
     },
     {
       "id": 6,
-      "title": "ticket 61",
-      "description": "description",
+      "title": "Integer sed consequat odio. Lorem.",
+      "Ut sagittis laoreet orci, et fringilla nibh condimentum in. Sed mattis non turpis sit amet sagittis. Fusce enim tellus, gravida ac laoreet sed, feugiat sed ligula. Duis faucibus justo quis tristique luctus. Nullam auctor elit sed velit consectetur, at venenatis ex tempus.": "Ut sagittis laoreet orci, et fringilla nibh condimentum in. Sed mattis non turpis sit amet sagittis. Fusce enim tellus, gravida ac laoreet sed, feugiat sed ligula. Duis faucibus justo quis tristique luctus. Nullam auctor elit sed velit consectetur, at venenatis ex tempus.",
       "status": 1
     },
     {
       "id": 7,
-      "title": "ticket 7",
-      "description": "description",
+      "title": "Integer sed consequat odio. Lorem.",
+      "Ut sagittis laoreet orci, et fringilla nibh condimentum in. Sed mattis non turpis sit amet sagittis. Fusce enim tellus, gravida ac laoreet sed, feugiat sed ligula. Duis faucibus justo quis tristique luctus. Nullam auctor elit sed velit consectetur, at venenatis ex tempus.": "Ut sagittis laoreet orci, et fringilla nibh condimentum in. Sed mattis non turpis sit amet sagittis. Fusce enim tellus, gravida ac laoreet sed, feugiat sed ligula. Duis faucibus justo quis tristique luctus. Nullam auctor elit sed velit consectetur, at venenatis ex tempus.",
       "status": 2
     },
     {
       "id": 8,
-      "title": "ticket 8",
-      "description": "description",
+      "title": "Lorem Ipsum 8",
+      "Ut sagittis laoreet orci, et fringilla nibh condimentum in. Sed mattis non turpis sit amet sagittis. Fusce enim tellus, gravida ac laoreet sed, feugiat sed ligula. Duis faucibus justo quis tristique luctus. Nullam auctor elit sed velit consectetur, at venenatis ex tempus.": "Ut sagittis laoreet orci, et fringilla nibh condimentum in. Sed mattis non turpis sit amet sagittis. Fusce enim tellus, gravida ac laoreet sed, feugiat sed ligula. Duis faucibus justo quis tristique luctus. Nullam auctor elit sed velit consectetur, at venenatis ex tempus.",
       "status": 3
     },
     {
       "id": 9,
-      "title": "ticket 9",
-      "description": "description",
+      "title": "Integer sed consequat odio. Lorem.",
+      "Ut sagittis laoreet orci, et fringilla nibh condimentum in. Sed mattis non turpis sit amet sagittis. Fusce enim tellus, gravida ac laoreet sed, feugiat sed ligula. Duis faucibus justo quis tristique luctus. Nullam auctor elit sed velit consectetur, at venenatis ex tempus.": "Ut sagittis laoreet orci, et fringilla nibh condimentum in. Sed mattis non turpis sit amet sagittis. Fusce enim tellus, gravida ac laoreet sed, feugiat sed ligula. Duis faucibus justo quis tristique luctus. Nullam auctor elit sed velit consectetur, at venenatis ex tempus.",
       "status": 4
     },
     {
       "id": 10,
-      "title": "ticket 10",
-      "description": "description",
+      "title": "Lorem Ipsum 10",
+      "Ut sagittis laoreet orci, et fringilla nibh condimentum in. Sed mattis non turpis sit amet sagittis. Fusce enim tellus, gravida ac laoreet sed, feugiat sed ligula. Duis faucibus justo quis tristique luctus. Nullam auctor elit sed velit consectetur, at venenatis ex tempus.": "Ut sagittis laoreet orci, et fringilla nibh condimentum in. Sed mattis non turpis sit amet sagittis. Fusce enim tellus, gravida ac laoreet sed, feugiat sed ligula. Duis faucibus justo quis tristique luctus. Nullam auctor elit sed velit consectetur, at venenatis ex tempus.",
       "status": 5
+    },
+    {
+      "id": 1658081814204,
+      "title": "test",
+      "description": "sdf sdf sdf sdf ",
+      "status": "1"
+    },
+    {
+      "id": 1658082077701,
+      "title": "Create localstorage hook",
+      "description": "create a useLocalStorage hook so we can reload the browser without losing any data",
+      "status": "3"
+    },
+    {
+      "id": 1658082355059,
+      "title": "Fetch data logic",
+      "description": "create fetch data logic",
+      "status": "1"
     }
   ]
 }

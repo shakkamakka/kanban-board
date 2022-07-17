@@ -1,24 +1,15 @@
 import useFetch from "../hooks/useFetch";
 import Card from "./Card";
+import {TaskProps, ListProps} from "../data/interface"
 
 
-interface listProps {
-  id: number;
-  value: string;
-}
-interface taskProps{
-  id: number;
-  title: string;
-  status: number;
-  description: string;
-}
 
-const List: React.FC<listProps> = ({ id, value}) => {
+const List: React.FC<ListProps> = ({ id, value}) => {
   const {
     data: dataTasks,
     isLoading,
     error,
-  } = useFetch(`https://my-json-server.typicode.com/shakkamakka/data/tasks?status=${id}`)
+  } = useFetch(`http://localhost:3000/tasks?status=${id}`)
   const count = dataTasks.length;
 
   return (
