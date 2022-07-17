@@ -1,4 +1,4 @@
 import Dashboard from "./Dashboard";
-import Ticket from "./Ticket";
+import Task from "./Task";
 
-export { Dashboard, Ticket };
+export { Dashboard, Task };

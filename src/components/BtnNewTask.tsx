@@ -1,12 +1,12 @@
 import { TiTicket } from "react-icons/ti";
 
-const BtnTicket = () => {
+const BtnNewTask = () => {
   return (
     <button className="btn_primary">
       <TiTicket />
-      New ticket
+      New Task
     </button>
   );
 };
 
-export default BtnTicket;
+export default BtnNewTask;

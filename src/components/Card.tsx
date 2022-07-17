@@ -12,7 +12,8 @@ const Card = ({ id, title, description, status }: CardProps) => {
   return (
     <div className="card" draggable="true">
       <span className="title">{title}</span>
-      <Link to={`/ticket/${id}`} >view ticket </Link>
+      <span className="description">{description}</span>
+      <Link to={`/task/${id}`} >View task </Link>
     </div>
   );
 };

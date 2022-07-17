@@ -1,7 +1,7 @@
 import Nav from "./Nav";
-import BtnTicket from "./BtnTicket";
+import BtnNewTask from "./BtnNewTask";
 import Row from "./Row";
 import Card from "./Card";
 import List from "./List";
 
-export { Nav, BtnTicket, Row, Card, List };
+export { Nav, BtnNewTask, Row, Card, List };

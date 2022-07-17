@@ -13,21 +13,16 @@ const Dashboard = () => {
   interface listProps {
     id: number;
     value: string;
-    tasks: {
-      id: number;
-      title: string;
-      status: number;
-      description: string;
-    }[];
   }
   return (
     <div className="dashboard">
       <Row>
         {isLoading && <div>loading...</div>}
         {error && <div>{error}</div>}
+        
         {dataList &&
           dataList.map((s: listProps) => (
-            <List key={s.id} id={s.id} value={s.value} tasks={s.tasks} />
+            <List key={s.id} id={s.id} value={s.value} />
           ))}
       </Row>
     </div>

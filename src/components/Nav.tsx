@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { BtnTicket } from ".";
+import { BtnNewTask } from ".";
 
 const Nav = () => {
   return (
@@ -7,7 +7,7 @@ const Nav = () => {
       <Link to="/">
         <h1>kanban board</h1>
       </Link>
-      <BtnTicket />
+      <BtnNewTask />
     </nav>
   );
 };
