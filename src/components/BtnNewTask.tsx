@@ -1,11 +1,12 @@
 import { TiTicket } from "react-icons/ti";
+import { Link } from "react-router-dom";
 
 const BtnNewTask = () => {
   return (
-    <button className="btn_primary">
+    <Link to="/create" className="btn_secondary">
       <TiTicket />
       New Task
-    </button>
+    </Link>
   );
 };
 
