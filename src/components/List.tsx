@@ -1,8 +1,7 @@
-import useFetch from "../hooks/useFetch";
 import Card from "./Card";
 
 
-interface statusProps {
+interface listProps {
   id: number;
   value: string;
   tasks: {
@@ -13,7 +12,7 @@ interface statusProps {
   }[];
 }
 
-const List: React.FC<statusProps> = ({ id, value, tasks}) => {
+const List: React.FC<listProps> = ({ id, value, tasks}) => {
   const count = tasks.length;
 
   return (
