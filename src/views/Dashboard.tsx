@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { Row, List } from "../components";
+import { ListProps } from "../data/interface";
 import useFetch from "../hooks/useFetch";
 
 const Dashboard = () => {
@@ -7,21 +8,17 @@ const Dashboard = () => {
     data: dataList,
     isLoading,
     error,
-  } = useFetch("https://my-json-server.typicode.com/shakkamakka/data/status");
+  } = useFetch("http://localhost:3000/status");
 
 
-  interface listProps {
-    id: number;
-    value: string;
-  }
   return (
     <div className="dashboard">
       <Row>
         {isLoading && <div>loading...</div>}
         {error && <div>{error}</div>}
-        
+
         {dataList &&
-          dataList.map((s: listProps) => (
+          dataList.map((s: ListProps) => (
             <List key={s.id} id={s.id} value={s.value} />
           ))}
       </Row>

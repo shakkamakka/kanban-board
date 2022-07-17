@@ -1,13 +1,8 @@
 import { Link } from "react-router-dom";
+import {TaskProps} from "../data/interface";
 
-type CardProps = {
-  id: number;
-  title: string;
-  description: string;
-  status: number;
-};
 
-const Card = ({ id, title, description, status }: CardProps) => {
+const Card = ({ id, title, description, status }: TaskProps) => {
 
   return (
     <div className="card" draggable="true">

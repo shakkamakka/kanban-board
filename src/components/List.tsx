@@ -31,7 +31,7 @@ const List: React.FC<listProps> = ({ id, value}) => {
       {error && <div>{error}</div>}
 
       {dataTasks &&
-        dataTasks.map(({id, status, title, description}:taskProps) => (
+        dataTasks.map(({id, status, title, description}:TaskProps) => (
           <Card
             key={id}
             id={id}
