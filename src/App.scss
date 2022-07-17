@@ -5,6 +5,7 @@ $appleBlue: #32af9f;
 $green: #44c767;
 $gray50: #fbfffe;
 $gray100: #f0f4f3;
+$gray200: #ddd;
 $gray400: #999;
 $randomColor: rgb(random(255), random(255), random(255));
 
@@ -16,21 +17,31 @@ $font2: "Mukta Vaani", sans-serif;
 $lineargradient: linear-gradient(to bottom, $green 5%, $appleBlue 100%);
 $borderRadius: 0.5rem;
 
-@mixin button() {
+@mixin Button {
 	border: none;
 	font-family: $font2;
 	font-size: 1.6rem;
-	padding: 0 2rem;
-	border-radius: borderRadius;
+	padding: 1rem 2rem;
+	border-radius: $borderRadius;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+	width: auto;
 	cursor: pointer;
 	& svg {
 		margin-right: 1rem;
 		height: 2rem;
 		width: 2rem;
 	}
+}
+
+@mixin formstyles {
+	padding: 0.5rem 1rem;
+	border: 1px solid $gray200;
+	font-family: $font2;
+	font-size: 1.6rem;
+	color: $gray400;
+	border-radius: $borderRadius;
 }
 
 *,
@@ -63,8 +74,15 @@ h1 {
 	font-family: $font1;
 	letter-spacing: 1px;
 }
+h2 {
+	color: $appleBlue;
+}
 h3 {
 	font-weight: 300;
+}
+.center {
+	text-align: center;
+	justify-content: center !important;
 }
 .nav {
 	padding: 2rem;
@@ -73,16 +91,16 @@ h3 {
 	display: flex;
 	justify-content: space-between;
 }
-button.btn_primary {
-	@include button();
+.btn_primary {
+	@include Button;
 	background: $lineargradient;
 	color: white;
 	&:hover {
 		background: $appleBlue;
 	}
 }
-button.btn_secondary {
-	@include button();
+.btn_secondary {
+	@include Button;
 	background: none;
 	color: $appleBlue;
 	border: 1px solid $appleBlue;
@@ -132,15 +150,37 @@ span.count {
 		font-weight: 200;
 	}
 }
-.task {
-	width: 80%;
+.page {
+	width: 50%;
 	margin: 2rem auto;
+	text-align: center;
 	background-color: white;
-	padding: 2rem;
+	padding: 4rem;
 	border-radius: $borderRadius;
 	box-shadow: $boxshadow;
+}
+.task {
 	.task__heading {
 		display: flex;
 		justify-content: space-between;
+	}
+}
+.create {
+	form {
+		display: flex;
+		flex-direction: column;
+		text-align: left;
+		label {
+			margin-top: 2rem;
+		}
+		input[type="text"] {
+			@include formstyles;
+		}
+		textarea {
+			@include formstyles;
+		}
+		select {
+			@include formstyles;
+		}
 	}
 }
