@@ -12,7 +12,7 @@ const CreateTask = () => {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   const [statusId, setStatusId] = useState<number>(1);
-  const [statusString, setStatusString] = useState<string>("");
+  const [statusString, setStatusString] = useState<string | undefined>("Backlog");
   const [isPending, setIsPending] = useState(false);
 
   const handleSubmit=(e:React.FormEvent)=>{
@@ -62,11 +62,11 @@ const CreateTask = () => {
         <select 
           value={statusId}          
           onChange={((e)=>{
+            setStatusString(e.target.options[e.target.selectedIndex].dataset.name);
             setStatusId(Number(e.target.value));
-            setStatusString(e.target.innerText);
           })}
         >
-          {data && data.map(({id, value}:ListProps)=><option key={id} value={id}>{value}</option>)}
+          {data && data.map(({id, value}:ListProps)=><option key={id} value={id} data-name={value}>{value}</option>)}
         </select>
         <br />
         {!isPending && <button type="submit" className='btn_primary center'>Add Task</button>}
