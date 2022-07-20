@@ -2,103 +2,103 @@
   "status": [
     {
       "id": 1,
-      "value": "Backlog"
+      "value": "Backlog",
+      "tasks": [
+        {
+          "id": 1,
+          "title": "Aliquam ultricies facilisis vestibulum.",
+          "description": "first ticket description"
+        },
+        {
+          "id": 2,
+          "title": "Nulla iaculis nulla et scelerisque iaculis",
+          "description": "Ut sagittis laoreet orci, et fringilla nibh condimentum in. Sed mattis non turpis sit amet sagittis. Fusce enim tellus, gravida ac laoreet sed, feugiat sed ligula. Duis faucibus justo quis tristique luctus. Nullam auctor elit sed velit consectetur, at venenatis ex tempus. Nulla iaculis nulla et scelerisque iaculis."
+        },
+        {
+          "id": 3,
+          "title": "Nunc eget vehicula velit",
+          "description": "Ut sagittis laoreet orci, et fringilla nibh condimentum in. Sed mattis non turpis sit amet sagittis. Fusce enim tellus, gravida ac laoreet sed, feugiat sed ligula. Duis faucibus justo quis tristique luctus. Nullam auctor elit sed velit consectetur, at venenatis ex tempus. Ut sagittis laoreet orci, et fringilla nibh condimentum in. Sed mattis non turpis sit amet sagittis. Fusce enim tellus, gravida ac laoreet sed, feugiat sed ligula. Duis faucibus justo quis tristique luctus. Nullam auctor elit sed velit consectetur, at venenatis ex tempus."
+        }
+      ]
     },
     {
       "id": 2,
-      "value": "To do"
+      "value": "To do",
+      "tasks": [
+        {
+          "id": 4,
+          "title": "Aliquam ultricies facilisis vestibulum.",
+          "description": "Ut sagittis laoreet orci, et fringilla nibh condimentum in. Sed mattis non turpis sit amet sagittis. Fusce enim tellus, gravida ac laoreet sed, feugiat sed ligula. Duis faucibus justo quis tristique luctus. Nullam auctor elit sed velit consectetur, at venenatis ex tempus. Ut sagittis laoreet orci, et fringilla nibh condimentum in. Sed mattis non turpis sit amet sagittis. Fusce enim tellus, gravida ac laoreet sed, feugiat sed ligula. Duis faucibus justo quis tristique luctus. Nullam auctor elit sed velit consectetur, at venenatis ex tempus."
+        },
+        {
+          "id": 5,
+          "title": "Aliquam ultricies facilisis vestibulum.",
+          "description": "Ut sagittis laoreet orci, et fringilla nibh condimentum in. Sed mattis non turpis sit amet sagittis. Fusce enim tellus, gravida ac laoreet sed, feugiat sed ligula. Duis faucibus justo quis tristique luctus. Nullam auctor elit sed velit consectetur, at venenatis ex tempus. Ut sagittis laoreet orci, et fringilla nibh condimentum in. Sed mattis non turpis sit amet sagittis. Fusce enim tellus, gravida ac laoreet sed, feugiat sed ligula. Duis faucibus justo quis tristique luctus. Nullam auctor elit sed velit consectetur, at venenatis ex tempus."
+        },
+        {
+          "id": 6,
+          "title": "Integer sed consequat odio. Lorem.",
+          "description": "Ut sagittis laoreet orci, et fringilla nibh condimentum in. Sed mattis non turpis sit amet sagittis. Fusce enim tellus, gravida ac laoreet sed, feugiat sed ligula. Duis faucibus justo quis tristique luctus. Nullam auctor elit sed velit consectetur, at venenatis ex tempus. Ut sagittis laoreet orci, et fringilla nibh condimentum in. Sed mattis non turpis sit amet sagittis. Fusce enim tellus, gravida ac laoreet sed, feugiat sed ligula. Duis faucibus justo quis tristique luctus. Nullam auctor elit sed velit consectetur, at venenatis ex tempus."
+        }
+      ]
     },
     {
       "id": 3,
-      "value": "In Progress"
+      "value": "In Progress",
+      "tasks": [
+        {
+          "id": 7,
+          "title": "Integer sed consequat odio. Lorem.",
+          "description": "Ut sagittis laoreet orci, et fringilla nibh condimentum in. Sed mattis non turpis sit amet sagittis. Fusce enim tellus, gravida ac laoreet sed, feugiat sed ligula. Duis faucibus justo quis tristique luctus. Nullam auctor elit sed velit consectetur, at venenatis ex tempus. Ut sagittis laoreet orci, et fringilla nibh condimentum in. Sed mattis non turpis sit amet sagittis. Fusce enim tellus, gravida ac laoreet sed, feugiat sed ligula. Duis faucibus justo quis tristique luctus. Nullam auctor elit sed velit consectetur, at venenatis ex tempus."
+        },
+        {
+          "id": 8,
+          "title": "Lorem Ipsum 8",
+          "description": "Ut sagittis laoreet orci, et fringilla nibh condimentum in. Sed mattis non turpis sit amet sagittis. Fusce enim tellus, gravida ac laoreet sed, feugiat sed ligula. Duis faucibus justo quis tristique luctus. Nullam auctor elit sed velit consectetur, at venenatis ex tempus. Ut sagittis laoreet orci, et fringilla nibh condimentum in. Sed mattis non turpis sit amet sagittis. Fusce enim tellus, gravida ac laoreet sed, feugiat sed ligula. Duis faucibus justo quis tristique luctus. Nullam auctor elit sed velit consectetur, at venenatis ex tempus."
+        }
+      ]
     },
     {
       "id": 4,
-      "value": "Testing"
+      "value": "Testing",
+      "tasks": [
+        {
+          "id": 9,
+          "title": "Integer sed consequat odio. Lorem.",
+          "description": "Ut sagittis laoreet orci, et fringilla nibh condimentum in. Sed mattis non turpis sit amet sagittis. Fusce enim tellus, gravida ac laoreet sed, feugiat sed ligula. Duis faucibus justo quis tristique luctus. Nullam auctor elit sed velit consectetur, at venenatis ex tempus. Ut sagittis laoreet orci, et fringilla nibh condimentum in. Sed mattis non turpis sit amet sagittis. Fusce enim tellus, gravida ac laoreet sed, feugiat sed ligula. Duis faucibus justo quis tristique luctus. Nullam auctor elit sed velit consectetur, at venenatis ex tempus."
+        },
+        {
+          "id": 10,
+          "title": "Lorem Ipsum 10",
+          "description": "Ut sagittis laoreet orci, et fringilla nibh condimentum in. Sed mattis non turpis sit amet sagittis. Fusce enim tellus, gravida ac laoreet sed, feugiat sed ligula. Duis faucibus justo quis tristique luctus. Nullam auctor elit sed velit consectetur, at venenatis ex tempus. Ut sagittis laoreet orci, et fringilla nibh condimentum in. Sed mattis non turpis sit amet sagittis. Fusce enim tellus, gravida ac laoreet sed, feugiat sed ligula. Duis faucibus justo quis tristique luctus. Nullam auctor elit sed velit consectetur, at venenatis ex tempus."
+        }
+      ]
     },
     {
       "id": 5,
-      "value": "Done"
-    }
-  ],
-  "tasks": [
-    {
-      "id": 1,
-      "title": "Aliquam ultricies facilisis vestibulum.",
-      "Ut sagittis laoreet orci, et fringilla nibh condimentum in. Sed mattis non turpis sit amet sagittis. Fusce enim tellus, gravida ac laoreet sed, feugiat sed ligula. Duis faucibus justo quis tristique luctus. Nullam auctor elit sed velit consectetur, at venenatis ex tempus.": "Ut sagittis laoreet orci, et fringilla nibh condimentum in. Sed mattis non turpis sit amet sagittis. Fusce enim tellus, gravida ac laoreet sed, feugiat sed ligula. Duis faucibus justo quis tristique luctus. Nullam auctor elit sed velit consectetur, at venenatis ex tempus.",
-      "status": 1
-    },
-    {
-      "id": 2,
-      "title": "Nulla iaculis nulla et scelerisque iaculis",
-      "Ut sagittis laoreet orci, et fringilla nibh condimentum in. Sed mattis non turpis sit amet sagittis. Fusce enim tellus, gravida ac laoreet sed, feugiat sed ligula. Duis faucibus justo quis tristique luctus. Nullam auctor elit sed velit consectetur, at venenatis ex tempus.": "Nulla iaculis nulla et scelerisque iaculis.",
-      "status": 2
-    },
-    {
-      "id": 3,
-      "title": "Nunc eget vehicula velit",
-      "Ut sagittis laoreet orci, et fringilla nibh condimentum in. Sed mattis non turpis sit amet sagittis. Fusce enim tellus, gravida ac laoreet sed, feugiat sed ligula. Duis faucibus justo quis tristique luctus. Nullam auctor elit sed velit consectetur, at venenatis ex tempus.": "Ut sagittis laoreet orci, et fringilla nibh condimentum in. Sed mattis non turpis sit amet sagittis. Fusce enim tellus, gravida ac laoreet sed, feugiat sed ligula. Duis faucibus justo quis tristique luctus. Nullam auctor elit sed velit consectetur, at venenatis ex tempus.",
-      "status": 3
-    },
-    {
-      "id": 4,
-      "title": "Aliquam ultricies facilisis vestibulum.",
-      "Ut sagittis laoreet orci, et fringilla nibh condimentum in. Sed mattis non turpis sit amet sagittis. Fusce enim tellus, gravida ac laoreet sed, feugiat sed ligula. Duis faucibus justo quis tristique luctus. Nullam auctor elit sed velit consectetur, at venenatis ex tempus.": "Ut sagittis laoreet orci, et fringilla nibh condimentum in. Sed mattis non turpis sit amet sagittis. Fusce enim tellus, gravida ac laoreet sed, feugiat sed ligula. Duis faucibus justo quis tristique luctus. Nullam auctor elit sed velit consectetur, at venenatis ex tempus.",
-      "status": 3
-    },
-    {
-      "id": 5,
-      "title": "Aliquam ultricies facilisis vestibulum.",
-      "Ut sagittis laoreet orci, et fringilla nibh condimentum in. Sed mattis non turpis sit amet sagittis. Fusce enim tellus, gravida ac laoreet sed, feugiat sed ligula. Duis faucibus justo quis tristique luctus. Nullam auctor elit sed velit consectetur, at venenatis ex tempus.": "Ut sagittis laoreet orci, et fringilla nibh condimentum in. Sed mattis non turpis sit amet sagittis. Fusce enim tellus, gravida ac laoreet sed, feugiat sed ligula. Duis faucibus justo quis tristique luctus. Nullam auctor elit sed velit consectetur, at venenatis ex tempus.",
-      "status": 5
-    },
-    {
-      "id": 6,
-      "title": "Integer sed consequat odio. Lorem.",
-      "Ut sagittis laoreet orci, et fringilla nibh condimentum in. Sed mattis non turpis sit amet sagittis. Fusce enim tellus, gravida ac laoreet sed, feugiat sed ligula. Duis faucibus justo quis tristique luctus. Nullam auctor elit sed velit consectetur, at venenatis ex tempus.": "Ut sagittis laoreet orci, et fringilla nibh condimentum in. Sed mattis non turpis sit amet sagittis. Fusce enim tellus, gravida ac laoreet sed, feugiat sed ligula. Duis faucibus justo quis tristique luctus. Nullam auctor elit sed velit consectetur, at venenatis ex tempus.",
-      "status": 1
-    },
-    {
-      "id": 7,
-      "title": "Integer sed consequat odio. Lorem.",
-      "Ut sagittis laoreet orci, et fringilla nibh condimentum in. Sed mattis non turpis sit amet sagittis. Fusce enim tellus, gravida ac laoreet sed, feugiat sed ligula. Duis faucibus justo quis tristique luctus. Nullam auctor elit sed velit consectetur, at venenatis ex tempus.": "Ut sagittis laoreet orci, et fringilla nibh condimentum in. Sed mattis non turpis sit amet sagittis. Fusce enim tellus, gravida ac laoreet sed, feugiat sed ligula. Duis faucibus justo quis tristique luctus. Nullam auctor elit sed velit consectetur, at venenatis ex tempus.",
-      "status": 2
-    },
-    {
-      "id": 8,
-      "title": "Lorem Ipsum 8",
-      "Ut sagittis laoreet orci, et fringilla nibh condimentum in. Sed mattis non turpis sit amet sagittis. Fusce enim tellus, gravida ac laoreet sed, feugiat sed ligula. Duis faucibus justo quis tristique luctus. Nullam auctor elit sed velit consectetur, at venenatis ex tempus.": "Ut sagittis laoreet orci, et fringilla nibh condimentum in. Sed mattis non turpis sit amet sagittis. Fusce enim tellus, gravida ac laoreet sed, feugiat sed ligula. Duis faucibus justo quis tristique luctus. Nullam auctor elit sed velit consectetur, at venenatis ex tempus.",
-      "status": 3
-    },
-    {
-      "id": 9,
-      "title": "Integer sed consequat odio. Lorem.",
-      "Ut sagittis laoreet orci, et fringilla nibh condimentum in. Sed mattis non turpis sit amet sagittis. Fusce enim tellus, gravida ac laoreet sed, feugiat sed ligula. Duis faucibus justo quis tristique luctus. Nullam auctor elit sed velit consectetur, at venenatis ex tempus.": "Ut sagittis laoreet orci, et fringilla nibh condimentum in. Sed mattis non turpis sit amet sagittis. Fusce enim tellus, gravida ac laoreet sed, feugiat sed ligula. Duis faucibus justo quis tristique luctus. Nullam auctor elit sed velit consectetur, at venenatis ex tempus.",
-      "status": 4
-    },
-    {
-      "id": 10,
-      "title": "Lorem Ipsum 10",
-      "Ut sagittis laoreet orci, et fringilla nibh condimentum in. Sed mattis non turpis sit amet sagittis. Fusce enim tellus, gravida ac laoreet sed, feugiat sed ligula. Duis faucibus justo quis tristique luctus. Nullam auctor elit sed velit consectetur, at venenatis ex tempus.": "Ut sagittis laoreet orci, et fringilla nibh condimentum in. Sed mattis non turpis sit amet sagittis. Fusce enim tellus, gravida ac laoreet sed, feugiat sed ligula. Duis faucibus justo quis tristique luctus. Nullam auctor elit sed velit consectetur, at venenatis ex tempus.",
-      "status": 5
-    },
-    {
-      "id": 1658081814204,
-      "title": "test",
-      "description": "sdf sdf sdf sdf ",
-      "status": "1"
-    },
-    {
-      "id": 1658082077701,
-      "title": "Create localstorage hook",
-      "description": "create a useLocalStorage hook so we can reload the browser without losing any data",
-      "status": "3"
-    },
-    {
-      "id": 1658082355059,
-      "title": "Fetch data logic",
-      "description": "create fetch data logic",
-      "status": "1"
+      "value": "Done",
+      "tasks": [
+        {
+          "id": 11,
+          "title": "Integer sed consequat odio. Lorem.",
+          "description": "Ut sagittis laoreet orci, et fringilla nibh condimentum in. Sed mattis non turpis sit amet sagittis. Fusce enim tellus, gravida ac laoreet sed, feugiat sed ligula. Duis faucibus justo quis tristique luctus. Nullam auctor elit sed velit consectetur, at venenatis ex tempus. Ut sagittis laoreet orci, et fringilla nibh condimentum in. Sed mattis non turpis sit amet sagittis. Fusce enim tellus, gravida ac laoreet sed, feugiat sed ligula. Duis faucibus justo quis tristique luctus. Nullam auctor elit sed velit consectetur, at venenatis ex tempus."
+        },
+        {
+          "id": 12,
+          "title": "Lorem Ipsum 8",
+          "description": "Ut sagittis laoreet orci, et fringilla nibh condimentum in. Sed mattis non turpis sit amet sagittis. Fusce enim tellus, gravida ac laoreet sed, feugiat sed ligula. Duis faucibus justo quis tristique luctus. Nullam auctor elit sed velit consectetur, at venenatis ex tempus. Ut sagittis laoreet orci, et fringilla nibh condimentum in. Sed mattis non turpis sit amet sagittis. Fusce enim tellus, gravida ac laoreet sed, feugiat sed ligula. Duis faucibus justo quis tristique luctus. Nullam auctor elit sed velit consectetur, at venenatis ex tempus."
+        },
+        {
+          "id": 13,
+          "title": "Integer sed consequat odio. Lorem.",
+          "description": "Ut sagittis laoreet orci, et fringilla nibh condimentum in. Sed mattis non turpis sit amet sagittis. Fusce enim tellus, gravida ac laoreet sed, feugiat sed ligula. Duis faucibus justo quis tristique luctus. Nullam auctor elit sed velit consectetur, at venenatis ex tempus. Ut sagittis laoreet orci, et fringilla nibh condimentum in. Sed mattis non turpis sit amet sagittis. Fusce enim tellus, gravida ac laoreet sed, feugiat sed ligula. Duis faucibus justo quis tristique luctus. Nullam auctor elit sed velit consectetur, at venenatis ex tempus."
+        },
+        {
+          "id": 14,
+          "title": "Lorem Ipsum 10",
+          "description": "Ut sagittis laoreet orci, et fringilla nibh condimentum in. Sed mattis non turpis sit amet sagittis. Fusce enim tellus, gravida ac laoreet sed, feugiat sed ligula. Duis faucibus justo quis tristique luctus. Nullam auctor elit sed velit consectetur, at venenatis ex tempus. Ut sagittis laoreet orci, et fringilla nibh condimentum in. Sed mattis non turpis sit amet sagittis. Fusce enim tellus, gravida ac laoreet sed, feugiat sed ligula. Duis faucibus justo quis tristique luctus. Nullam auctor elit sed velit consectetur, at venenatis ex tempus."
+        }
+      ]
     }
   ]
 }

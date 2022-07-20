@@ -1,5 +1,5 @@
-import Dashboard from "./Dashboard";
+import Board from "./Board";
 import Task from "./Task";
 import CreateTask from "./CreateTask";
 
-export { Dashboard, Task, CreateTask };
+export { Board, Task, CreateTask };

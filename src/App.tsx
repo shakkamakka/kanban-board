@@ -1,6 +1,6 @@
 import "./App.scss";
 import { Route, Routes } from "react-router-dom";
-import { Dashboard, Task, CreateTask } from "./views";
+import { Board, Task, CreateTask } from "./views";
 import { Nav } from "./components";
 
 function App() {
@@ -8,8 +8,8 @@ function App() {
     <div className="container">
       <Nav />
       <Routes>
-        <Route path="/" element={<Dashboard />} />
-        <Route path="/task/:id" element={<Task />} />
+        <Route path="/" element={<Board />} />
+        <Route path="/task/:statusId/:id" element={<Task />} />
         <Route path="/create" element={<CreateTask />} />
       </Routes>
     </div>
