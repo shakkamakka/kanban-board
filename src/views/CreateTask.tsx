@@ -35,8 +35,6 @@ const CreateTask = () => {
         "value":statusString, // add this again, otherwise it dissapears somehow
         "tasks":newData
       })
-    }).then(res=>{
-      console.log(res)
     }).then(()=>{
       setIsPending(false);
       navigate("/");

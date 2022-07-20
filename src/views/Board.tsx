@@ -59,7 +59,20 @@ const Board = () => {
   const handleOnDrop = () =>{
     setDragCardId(0);
     setTouchCardId(0);
-    // post data to DB
+    // update DB
+    //json-server can only update 1 item per call so we loop through the object
+    dataList.map((list:ListProps)=>{
+      fetch(`http://localhost:3000/status/${list.id}`,{
+        method:'PUT',
+        headers:{ "Content-Type": "application/json" },
+        body: JSON.stringify({
+          "value":list.value,
+          "tasks":list.tasks
+        })
+      }).then(res=>{
+        console.log(res)
+      });
+    });
   }
 
   return (
@@ -91,7 +104,7 @@ const Board = () => {
                 onDragLeave={()=>setTouchCardId(0)}
                 onDrop={()=>handleOnDrop()}
                 >
-                  <span className="title">{id} {title} </span>
+                  <span className="title">{title} </span>
                   <span className="description">{description?.substring(0, 50)}...</span>
                   <Link to={`/task/${s.id}/${id}`} draggable={false}>View task </Link>
                 </div>
