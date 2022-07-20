@@ -6,25 +6,37 @@ import { useNavigate } from 'react-router-dom';
 const CreateTask = () => {
   const navigate= useNavigate();
   const {
-    data:dataStatus
+    data
   } = useFetch(`http://localhost:3000/status`);
 
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
-  const [status, setStatus] = useState("1");
+  const [statusId, setStatusId] = useState<number>(1);
+  const [statusString, setStatusString] = useState<string>("");
   const [isPending, setIsPending] = useState(false);
 
   const handleSubmit=(e:React.FormEvent)=>{
     e.preventDefault();
     const id = Date.now();
-    const task = {id, title, description, status};
+    const task = {id, title, description};
 
     setIsPending(true);
 
-    fetch(`http://localhost:3000/tasks`, {
-      method:'POST',
+    // push task
+    const newData = data.filter((status:ListProps)=>status.id === statusId)[0].tasks;
+    newData.push(task);
+    
+
+    // post tasks array because json-server doesn't support nested objects
+    fetch(`http://localhost:3000/status/${statusId}`, {
+      method:'PUT',
       headers:{ "Content-Type": "application/json" },
-      body: JSON.stringify(task)
+      body: JSON.stringify({
+        "value":statusString, // add this again, otherwise it dissapears somehow
+        "tasks":newData
+      })
+    }).then(res=>{
+      console.log(res)
     }).then(()=>{
       setIsPending(false);
       navigate("/");
@@ -50,10 +62,13 @@ const CreateTask = () => {
         > </textarea>
         <label>Status</label>
         <select 
-          value={status}          
-          onChange={((e)=>setStatus(e.target.value))}
+          value={statusId}          
+          onChange={((e)=>{
+            setStatusId(Number(e.target.value));
+            setStatusString(e.target.innerText);
+          })}
         >
-          {dataStatus && dataStatus.map(({id, value}:ListProps)=><option key={id} value={id}>{value}</option>)}
+          {data && data.map(({id, value}:ListProps)=><option key={id} value={id}>{value}</option>)}
         </select>
         <br />
         {!isPending && <button type="submit" className='btn_primary center'>Add Task</button>}

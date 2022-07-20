@@ -70,6 +70,7 @@ const Board = () => {
 
         {dataList &&
           dataList.map((s: ListProps, statusIndex:number) => (
+            // Column
             <div 
               className="column" 
               key={s.id}
@@ -79,6 +80,7 @@ const Board = () => {
                 {s.value} 
               </h3>
 
+              {/* Card */}
               {s.tasks.map(({id, title, description}:TaskProps, index:number)=>(
                 <div 
                 key={id}
