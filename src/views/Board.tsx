@@ -3,6 +3,7 @@ import { Row } from "../components";
 import { ListProps, TaskProps } from "../data/interface";
 import useFetch from "../hooks/useFetch";
 import { Link } from "react-router-dom";
+import {RiDeleteBin6Line} from "react-icons/ri"
 
 const Board = () => {
   const {
@@ -19,6 +20,23 @@ const Board = () => {
   useEffect(()=>{
     setDataList(data);
   }, [data])
+
+  const updateDB = (newdata:ListProps[]) => {
+    //json-server can only update 1 item per call so we loop through the object
+    newdata.map((list:ListProps)=>{
+      fetch(`http://localhost:3000/status/${list.id}`,{
+        method:'PUT',
+        headers:{ "Content-Type": "application/json" },
+        body: JSON.stringify({
+          "value":list.value,
+          "tasks":list.tasks
+        })
+      }).then(res=>{
+        console.log(res)
+      });
+    });
+    setDataList(newdata);
+  }
 
   const handleDragStart= (e:React.DragEvent, id:Number)=>{
       const cardObject = dataList.filter((list:ListProps)=> list.tasks.some(task=>task.id === id))[0].tasks.filter((task:TaskProps)=> task.id===id);
@@ -56,23 +74,16 @@ const Board = () => {
     }
   }
 
-  const handleOnDrop = () =>{
+  const handleOnDropCard = () =>{
     setDragCardId(0);
     setTouchCardId(0);
-    // update DB
-    //json-server can only update 1 item per call so we loop through the object
-    dataList.map((list:ListProps)=>{
-      fetch(`http://localhost:3000/status/${list.id}`,{
-        method:'PUT',
-        headers:{ "Content-Type": "application/json" },
-        body: JSON.stringify({
-          "value":list.value,
-          "tasks":list.tasks
-        })
-      }).then(res=>{
-        console.log(res)
-      });
-    });
+    updateDB(dataList);
+  }
+
+  const handleDelete = (id:number) =>{
+    console.log("deleet")
+    const newData = dataList.map((list:ListProps) => ({ ...list, "tasks": list.tasks.filter((task:TaskProps)=>task.id!==id)}));
+    updateDB(newData);
   }
 
   return (
