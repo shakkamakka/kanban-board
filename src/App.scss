@@ -2,12 +2,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Mukta+Vaani:wght@200;300;700&display=swap");
 
 $appleBlue: #32af9f;
+$blue: #3a86ff;
 $green: #44c767;
+$purple: #8338ec;
+$orange: #fb5607;
+$red: #ff006e;
+$yellow: #ffbe0b;
 $gray50: #fbfffe;
 $gray100: #f0f4f3;
 $gray200: #ddd;
 $gray400: #999;
 $randomColor: rgb(random(255), random(255), random(255));
+$colors: ($appleBlue, $purple, $red, $yellow, $green, $orange);
 
 $boxshadowS: 0 0 1px rgba(0, 0, 0, 0.5);
 $boxshadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
@@ -21,7 +27,7 @@ $borderRadius: 0.5rem;
 	border: none;
 	font-family: $font2;
 	font-size: 1.6rem;
-	padding: 1rem 2rem;
+	padding: 0.1rem 2rem;
 	border-radius: $borderRadius;
 	display: flex;
 	align-items: center;
@@ -108,18 +114,7 @@ h3 {
 		border: 1px solid $green;
 	}
 }
-span.count {
-	font-weight: 300;
-	font-size: 1.6rem;
-	display: inline-flex;
-	justify-content: center;
-	align-items: center;
-	border-radius: 50%;
-	margin-left: 0.5rem;
-	background: rgba(0, 0, 0, 0.07);
-	height: 2.8rem;
-	width: 2.8rem;
-}
+
 .row {
 	display: flex;
 	flex-wrap: nowrap;
@@ -134,28 +129,51 @@ span.count {
 	position: relative;
 	display: flex;
 	flex-direction: column;
-}
-.card {
-	border-radius: $borderRadius;
-	display: flex;
-	justify-content: space-between;
-	background: #fff;
-	padding: 2rem;
-	box-shadow: $boxshadow;
-	min-height: 10rem;
-	margin-top: 1.5rem;
-	display: flex;
-	flex-direction: column;
-	.title {
-		font-weight: 200;
+	span.count {
+		font-weight: 300;
+		font-size: 1.6rem;
+		display: inline-flex;
+		justify-content: center;
+		align-items: center;
+		border-radius: 50%;
+		margin-right: 0.5rem;
+		height: 2.8rem;
+		width: 2.8rem;
+		color: white;
 	}
-}
-.card.dragging {
-	cursor: move !important;
-	opacity: 0.5;
-}
-.card-filler {
-	flex-grow: 1;
+	@for $i from 1 through 5 {
+		&:nth-child(#{$i}) span.count {
+			background: nth($colors, $i);
+			opacity: 0.5;
+		}
+		&:nth-child(#{$i}) .card {
+			border-top: 3px solid;
+			border-top-color: nth($colors, $i);
+		}
+	}
+	.card {
+		border-radius: $borderRadius;
+		display: flex;
+		justify-content: space-between;
+		background: #fff;
+		padding: 2rem;
+		box-shadow: $boxshadow;
+		min-height: 10rem;
+		margin-top: 1.5rem;
+		display: flex;
+		flex-direction: column;
+		.title {
+			font-weight: 200;
+		}
+	}
+	.card.dragging {
+		cursor: move !important;
+		opacity: 0.5;
+		border-top-color: #999 !important;
+	}
+	.card-filler {
+		flex-grow: 1;
+	}
 }
 .page {
 	width: 50%;

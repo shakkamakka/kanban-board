@@ -75,8 +75,8 @@ const Board = () => {
               key={s.id}
             >
               <h3>
-                {s.value} 
                 <span className="count">{s.tasks.length}</span>
+                {s.value} 
               </h3>
 
               {s.tasks.map(({id, title, description}:TaskProps, index:number)=>(

@@ -5,7 +5,7 @@ const BtnNewTask = () => {
   return (
     <Link to="/create" className="btn_secondary">
       <TiTicket />
-      New Task
+      Add Task
     </Link>
   );
 };
