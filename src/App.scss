@@ -162,8 +162,30 @@ h3 {
 		margin-top: 1.5rem;
 		display: flex;
 		flex-direction: column;
-		.title {
-			font-weight: 200;
+		.card-header {
+			display: flex;
+			justify-content: space-between;
+			align-items: flex-start;
+			flex-grow: 0;
+			.card__delete {
+				border: none;
+				background: none;
+				color: $gray200;
+				&:hover {
+					cursor: pointer;
+					color: $red;
+				}
+				svg {
+					height: 2rem;
+					width: 2rem;
+				}
+			}
+			.card__title {
+				font-weight: 600;
+			}
+		}
+		.card__description {
+			font-weight: 100;
 		}
 	}
 	.card.dragging {

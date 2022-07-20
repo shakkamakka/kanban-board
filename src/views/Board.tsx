@@ -102,10 +102,14 @@ const Board = () => {
                 onDragStart={(e)=> handleDragStart(e, id)}
                 onDragOver={(e)=>handleDragOverCard(e, id, index, s.id, statusIndex)}
                 onDragLeave={()=>setTouchCardId(0)}
-                onDrop={()=>handleOnDrop()}
+                onDrop={()=>handleOnDropCard()}
                 >
-                  <span className="title">{title} </span>
-                  <span className="description">{description?.substring(0, 50)}...</span>
+                  <div className="card-header">
+                    <span className="card__title">{title} </span>
+                    <button className="card__delete" onClick={()=>handleDelete(id)}><RiDeleteBin6Line /></button>
+                  </div>
+
+                  <span className="card__description">{description?.substring(0, 50)}...</span>
                   <Link to={`/task/${s.id}/${id}`} draggable={false}>View task </Link>
                 </div>
               ))}
