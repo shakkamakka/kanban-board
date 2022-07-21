@@ -10,12 +10,13 @@
 
 **How to run the code**
 
-After downloading the master repository you can open the terminal at the root of the repo and run the code by first installing dependencies and then start the scripts.
+After downloading the repository you can open the terminal at the root of the repo and run the code by first installing dependencies and then start the scripts.
 
 - npm install
 - npm start
 
 This will start both json-server and the react scripts.
+The application will run in localhost on port 5173 [http://localhost:5173/](http://localhost:5173/)
 
 [demo on CodeSandbox](https://codesandbox.io/s/react-typescript-kanban-board-bzzvqm)
 
