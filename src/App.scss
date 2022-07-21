@@ -305,3 +305,41 @@ form.create {
 		@include formstyles;
 	}
 }
+
+.copy_url {
+	display: flex;
+	align-items: center;
+	margin-top: 4rem;
+	> span {
+		margin: 1rem;
+	}
+	input {
+		@include Button;
+		padding: 0.3rem 1rem;
+		border-radius: $borderRadius;
+		border: 1px solid $gray200;
+		color: $gray400;
+		width: 50%;
+		border-top-right-radius: 0;
+		border-bottom-right-radius: 0;
+		border-right: none;
+	}
+	button {
+		padding: 0.65rem 1rem;
+		border-color: $gray200;
+		color: $gray400;
+		border-top-left-radius: 0;
+		border-bottom-left-radius: 0;
+		cursor: pointer;
+		svg {
+			margin: 0;
+		}
+		&.active {
+			border-color: $green;
+			color: $green;
+		}
+	}
+	.copy_url__succes {
+		color: $green;
+	}
+}

@@ -1,14 +1,17 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { TaskProps } from "../data/interface";
 import useFetch from "../hooks/useFetch";
-
+import {HiOutlineClipboardCheck, HiOutlineClipboardCopy} from "react-icons/hi";
 
 
 const Task = () => {  
   const {statusId, id}=useParams();
   const [data, setData] = useState<TaskProps>();
   const [status, setStatus] = useState(0);
+  const urlRef=useRef<HTMLInputElement>(null);
+  const url=window.location.href;
+  const [isCopied, setIsCopied] = useState(false);
 
   // we take the whole status object because nested arrays aren't supported in JSON-server
   const {
@@ -26,6 +29,13 @@ const Task = () => {
     setData(filteredTasks);
   }, [dataStatus])
 
+  const copyUrl = () => {
+    urlRef.current?.select()
+    navigator.clipboard.writeText(urlRef.current?.value || "");
+    setIsCopied(true);
+    
+  }
+
   return (
   <section className="page task" data-id={statusId}>
     {isLoading && <div>loading...</div>}
@@ -36,7 +46,22 @@ const Task = () => {
         <span className="task__badge">{status}</span>
         <h2>{data.title}</h2>
       </div>
+
       <div className="task__description">{data.description}</div>
+
+      <div className="copy_url">
+        <span>Copy url:</span>
+        <input type="text" value={url} ref={urlRef} readOnly />
+        <button 
+          onClick={()=>copyUrl()} 
+          title="Copy url to clipboard"
+          className={isCopied ?"btn_secondary active" :"btn_secondary"}
+          >
+          {isCopied ? <HiOutlineClipboardCheck /> : <HiOutlineClipboardCopy />}
+        </button>
+        {isCopied && <span className="copy_url__succes">Copied to clipboard!</span>}
+      </div>
+
       <div className="task__footer">
         <Link to="/" className="btn_secondary">Go Back</Link>
         <button className="btn_secondary">Edit</button>
