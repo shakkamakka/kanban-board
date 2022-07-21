@@ -30,12 +30,12 @@
           "description": "Ut sagittis laoreet orci, et fringilla nibh condimentum in. Sed mattis non turpis sit amet sagittis. Fusce enim tellus, gravida ac laoreet sed, feugiat sed ligula. Duis faucibus justo quis tristique luctus. Nullam auctor elit sed velit consectetur, at venenatis ex tempus. Ut sagittis laoreet orci, et fringilla nibh condimentum in. Sed mattis non turpis sit amet sagittis. Fusce enim tellus, gravida ac laoreet sed, feugiat sed ligula. Duis faucibus justo quis tristique luctus. Nullam auctor elit sed velit consectetur, at venenatis ex tempus."
         },
         {
-          "id": 1,
-          "title": "Aliquam ultricies facilisis vestibulum.",
-          "description": "first ticket description"
+          "id": 9,
+          "title": "Integer sed consequat odio. Lorem.",
+          "description": "Ut sagittis laoreet orci, et fringilla nibh condimentum in. Sed mattis non turpis sit amet sagittis. Fusce enim tellus, gravida ac laoreet sed, feugiat sed ligula. Duis faucibus justo quis tristique luctus. Nullam auctor elit sed velit consectetur, at venenatis ex tempus. Ut sagittis laoreet orci, et fringilla nibh condimentum in. Sed mattis non turpis sit amet sagittis. Fusce enim tellus, gravida ac laoreet sed, feugiat sed ligula. Duis faucibus justo quis tristique luctus. Nullam auctor elit sed velit consectetur, at venenatis ex tempus."
         },
         {
-          "id": 9,
+          "id": 13,
           "title": "Integer sed consequat odio. Lorem.",
           "description": "Ut sagittis laoreet orci, et fringilla nibh condimentum in. Sed mattis non turpis sit amet sagittis. Fusce enim tellus, gravida ac laoreet sed, feugiat sed ligula. Duis faucibus justo quis tristique luctus. Nullam auctor elit sed velit consectetur, at venenatis ex tempus. Ut sagittis laoreet orci, et fringilla nibh condimentum in. Sed mattis non turpis sit amet sagittis. Fusce enim tellus, gravida ac laoreet sed, feugiat sed ligula. Duis faucibus justo quis tristique luctus. Nullam auctor elit sed velit consectetur, at venenatis ex tempus."
         }
@@ -56,11 +56,6 @@
           "description": "What is to be discussed:\n- deadline\n- features\n- design"
         },
         {
-          "id": 13,
-          "title": "Integer sed consequat odio. Lorem.",
-          "description": "Ut sagittis laoreet orci, et fringilla nibh condimentum in. Sed mattis non turpis sit amet sagittis. Fusce enim tellus, gravida ac laoreet sed, feugiat sed ligula. Duis faucibus justo quis tristique luctus. Nullam auctor elit sed velit consectetur, at venenatis ex tempus. Ut sagittis laoreet orci, et fringilla nibh condimentum in. Sed mattis non turpis sit amet sagittis. Fusce enim tellus, gravida ac laoreet sed, feugiat sed ligula. Duis faucibus justo quis tristique luctus. Nullam auctor elit sed velit consectetur, at venenatis ex tempus."
-        },
-        {
           "id": 6,
           "title": "Integer sed consequat odio. Lorem.",
           "description": "Ut sagittis laoreet orci, et fringilla nibh condimentum in. Sed mattis non turpis sit amet sagittis. Fusce enim tellus, gravida ac laoreet sed, feugiat sed ligula. Duis faucibus justo quis tristique luctus. Nullam auctor elit sed velit consectetur, at venenatis ex tempus. Ut sagittis laoreet orci, et fringilla nibh condimentum in. Sed mattis non turpis sit amet sagittis. Fusce enim tellus, gravida ac laoreet sed, feugiat sed ligula. Duis faucibus justo quis tristique luctus. Nullam auctor elit sed velit consectetur, at venenatis ex tempus."
@@ -75,6 +70,11 @@
           "id": 1658341869617,
           "title": "new Task",
           "description": "make kanban board"
+        },
+        {
+          "id": 1,
+          "title": "Aliquam ultricies facilisis vestibulum.",
+          "description": "first ticket description"
         },
         {
           "id": 3,
