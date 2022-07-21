@@ -16,6 +16,7 @@ After downloading the master repository you can open the terminal at the root of
 - npm start
 
 This will start both json-server and the react scripts.
+The application will run in localhost on port 5173 [http://localhost:5173/](http://localhost:5173/)
 
 [demo on CodeSandbox](https://codesandbox.io/s/react-typescript-kanban-board-bzzvqm)
 
