@@ -16,7 +16,7 @@ const ModalCreate = () => {
       isOpen={isModalOpen}
       setIsOpen={setIsModalOpen}
     >
-      <FormCreate setIsModalOpen={setIsModalOpen} />
+      <FormCreate isOpen={isModalOpen} setIsModalOpen={setIsModalOpen} />
     </Modal>
     </>
   )
