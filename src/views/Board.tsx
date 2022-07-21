@@ -94,6 +94,7 @@ const Board = () => {
             // Column
             <div 
               className="column" 
+              data-id={s.id}
               key={s.id}
             >
               <h3>

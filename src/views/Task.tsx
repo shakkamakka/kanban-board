@@ -27,16 +27,16 @@ const Task = () => {
   }, [dataStatus])
 
   return (
-  <section className="page task">
+  <section className="page task" data-id={statusId}>
     {isLoading && <div>loading...</div>}
     {error && <div>{error}</div>}
     {data && 
     <div>
       <div className="task__heading">
+        <span className="task__badge">{status}</span>
         <h2>{data.title}</h2>
-        <h4>Status: {status}</h4>
       </div>
-      <div>{data.description}</div>
+      <div className="task__description">{data.description}</div>
     </div>}
   </section>   
   )

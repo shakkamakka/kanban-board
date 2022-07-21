@@ -51,6 +51,11 @@
           "description": "Ut sagittis laoreet orci, et fringilla nibh condimentum in. Sed mattis non turpis sit amet sagittis. Fusce enim tellus, gravida ac laoreet sed, feugiat sed ligula. Duis faucibus justo quis tristique luctus. Nullam auctor elit sed velit consectetur, at venenatis ex tempus. Ut sagittis laoreet orci, et fringilla nibh condimentum in. Sed mattis non turpis sit amet sagittis. Fusce enim tellus, gravida ac laoreet sed, feugiat sed ligula. Duis faucibus justo quis tristique luctus. Nullam auctor elit sed velit consectetur, at venenatis ex tempus."
         },
         {
+          "id": 1658341869617,
+          "title": "new Task",
+          "description": "make kanban board"
+        },
+        {
           "id": 1658423956054,
           "title": "Meet with PM to discuss ideas",
           "description": "What is to be discussed:\n- deadline\n- features\n- design"
@@ -67,16 +72,6 @@
       "value": "Testing",
       "tasks": [
         {
-          "id": 1658341869617,
-          "title": "new Task",
-          "description": "make kanban board"
-        },
-        {
-          "id": 1,
-          "title": "Aliquam ultricies facilisis vestibulum.",
-          "description": "first ticket description"
-        },
-        {
           "id": 3,
           "title": "Nunc eget vehicula velit",
           "description": "Ut sagittis laoreet orci, et fringilla nibh condimentum in. Sed mattis non turpis sit amet sagittis. Fusce enim tellus, gravida ac laoreet sed, feugiat sed ligula. Duis faucibus justo quis tristique luctus. Nullam auctor elit sed velit consectetur, at venenatis ex tempus. Ut sagittis laoreet orci, et fringilla nibh condimentum in. Sed mattis non turpis sit amet sagittis. Fusce enim tellus, gravida ac laoreet sed, feugiat sed ligula. Duis faucibus justo quis tristique luctus. Nullam auctor elit sed velit consectetur, at venenatis ex tempus."
@@ -85,6 +80,11 @@
           "id": 1658418233278,
           "title": "we have another task",
           "description": "dfd dfdf "
+        },
+        {
+          "id": 1,
+          "title": "Aliquam ultricies facilisis vestibulum.",
+          "description": "first ticket description"
         }
       ],
       "id": 4
