@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { ListProps } from '../data/interface';
 import useFetch from '../hooks/useFetch';
-import { useNavigate, useLocation } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 type props={
   isOpen:boolean,
