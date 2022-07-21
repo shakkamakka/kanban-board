@@ -1,3 +1,24 @@
+# Kanban Board
+
+**Stack**
+
+- React ^18.2.0(Vite boilerplate)
+- React-router-dom 6
+- Typescript
+- Sass
+- Json-server 
+
+**How to run the code**
+
+After downloading the master repository you can open the terminal at the root of the repo and run the code by first installing dependencies and then start the scripts.
+
+- npm install
+- npm start
+
+This will start both json-server and the react scripts.
+
+[demo on CodeSandbox](https://codesandbox.io/s/react-typescript-kanban-board-bzzvqm)
+
 # Technical assignment front-end engineer
 
 Create a minimal Kanban board on which you can create, view and move tickets between columns.
