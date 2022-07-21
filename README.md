@@ -10,7 +10,7 @@
 
 **How to run the code**
 
-After downloading the master repository you can open the terminal at the root of the repo and run the code by first installing dependencies and then start the scripts.
+After downloading the repository you can open the terminal at the root of the repo and run the code by first installing dependencies and then start the scripts.
 
 - npm install
 - npm start
