@@ -16,8 +16,8 @@ $randomColor: rgb(random(255), random(255), random(255));
 $colors: ($appleBlue, $purple, $red, $yellow, $green, $orange);
 
 $boxshadowS: 0 0 1px rgba(0, 0, 0, 0.5);
-$boxshadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-$boxshadowXL: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+$boxshadow: 0 1px 2px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.12);
+$boxshadowXL: 0 14px 28px rgba(0, 0, 0, 0.12), 0 10px 10px rgba(0, 0, 0, 0.12);
 $font1: "Neucha", cursive;
 $font2: "Mukta Vaani", sans-serif;
 $lineargradient: linear-gradient(to bottom, $green 5%, $appleBlue 100%);
@@ -61,7 +61,7 @@ html {
 }
 #root {
 	min-height: 100vh;
-	background-color: $gray100;
+	background-color: $gray50;
 }
 .container {
 	display: block;
@@ -98,10 +98,10 @@ h3 {
 }
 .btn_primary {
 	@include Button;
-	background: $lineargradient;
+	background: $appleBlue;
 	color: white;
 	&:hover {
-		background: $appleBlue;
+		background: $lineargradient;
 	}
 }
 .btn_secondary {
@@ -212,22 +212,73 @@ h3 {
 		justify-content: space-between;
 	}
 }
-.create {
-	form {
-		display: flex;
-		flex-direction: column;
-		text-align: left;
-		label {
-			margin-top: 2rem;
-		}
-		input[type="text"] {
-			@include formstyles;
-		}
-		textarea {
-			@include formstyles;
-		}
-		select {
-			@include formstyles;
-		}
+.modal {
+	display: none;
+}
+.modal.active {
+	z-index: 999;
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+	transition: all 1s;
+}
+.modal.active > div {
+	background-color: white;
+	max-width: 50%;
+	max-height: 90%;
+	box-sizing: border-box;
+	overflow: auto;
+	margin: 3% auto;
+	padding: 4rem;
+	text-align: center;
+	display: flex;
+	justify-content: flex-start;
+	position: relative;
+	box-shadow: $boxshadow;
+	border-radius: $borderRadius;
+}
+.modal button.modalclose {
+	float: right;
+	position: absolute;
+	border-radius: 50%;
+	padding: 5px;
+	top: 10px;
+	right: 10px;
+	cursor: pointer;
+	width: 30px;
+	height: 30px;
+	border: 3px solid $gray200;
+	color: $gray200;
+	font-weight: bold;
+	background-color: white;
+}
+.modal button.modalclose:hover {
+	border: 3px solid $gray400;
+	color: $gray400;
+	background-color: white;
+}
+form.create {
+	display: flex;
+	flex-direction: column;
+	text-align: left;
+	width: 100%;
+	h2 {
+		text-align: center;
+	}
+	label {
+		margin-top: 2rem;
+	}
+	input[type="text"] {
+		@include formstyles;
+	}
+	textarea {
+		@include formstyles;
+	}
+	select {
+		@include formstyles;
 	}
 }

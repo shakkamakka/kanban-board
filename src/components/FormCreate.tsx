@@ -1,9 +1,14 @@
 import React, { useState } from 'react';
 import { ListProps } from '../data/interface';
 import useFetch from '../hooks/useFetch';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 
-const CreateTask = () => {
+type props={
+  isOpen:boolean,
+  setIsModalOpen:(isOpen:boolean)=>void
+}
+
+const FormCreate = ({setIsModalOpen}:props ) => {
   const navigate= useNavigate();
   const {
     data
@@ -15,7 +20,7 @@ const CreateTask = () => {
   const [statusString, setStatusString] = useState<string | undefined>("Backlog");
   const [isPending, setIsPending] = useState(false);
 
-  const handleSubmit=(e:React.FormEvent)=>{
+  const handleSubmitted=(e:React.FormEvent)=>{
     e.preventDefault();
     const id = Date.now();
     const task = {id, title, description};
@@ -37,14 +42,19 @@ const CreateTask = () => {
       })
     }).then(()=>{
       setIsPending(false);
-      navigate("/");
+      setIsModalOpen(false);
+      if(location.pathname==='/'){
+        window.location.reload();
+      }
+      else{
+        navigate('/');
+      }
     })
   }
 
   return (
-    <section className="page create">
-      <h2>Create a new Task</h2>
-      <form onSubmit={(e)=>handleSubmit(e)}>
+      <form className="create" onSubmit={(e)=>handleSubmitted(e)}>
+        <h2>Create a new Task</h2>
         <label>Title</label>
         <input
           type="text"
@@ -72,8 +82,7 @@ const CreateTask = () => {
         {!isPending && <button type="submit" className='btn_primary center'>Add Task</button>}
         {isPending && <button type="submit" className='btn_primary center' disabled>Saving...</button>}
       </form>
-    </section>
   )
 }
 
-export default CreateTask
+export default FormCreate

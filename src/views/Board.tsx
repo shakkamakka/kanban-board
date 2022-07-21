@@ -31,9 +31,7 @@ const Board = () => {
           "value":list.value,
           "tasks":list.tasks
         })
-      }).then(res=>{
-        console.log(res)
-      });
+      })
     });
     setDataList(newdata);
   }
@@ -81,7 +79,6 @@ const Board = () => {
   }
 
   const handleDelete = (id:number) =>{
-    console.log("deleet")
     const newData = dataList.map((list:ListProps) => ({ ...list, "tasks": list.tasks.filter((task:TaskProps)=>task.id!==id)}));
     updateDB(newData);
   }
@@ -112,7 +109,7 @@ const Board = () => {
                 draggable
                 onDragStart={(e)=> handleDragStart(e, id)}
                 onDragOver={(e)=>handleDragOverCard(e, id, index, s.id, statusIndex)}
-                onDragLeave={()=>setTouchCardId(0)}
+                onDragLeave={()=> setTouchCardId(0)}
                 onDrop={()=>handleOnDropCard()}
                 >
                   <div className="card-header">
@@ -121,7 +118,7 @@ const Board = () => {
                   </div>
 
                   <span className="card__description">{description?.substring(0, 50)}...</span>
-                  <Link to={`/task/${s.id}/${id}`} draggable={false}>View task </Link>
+                  <Link to={`/task/${s.id}/${id}`} draggable={false}>View details </Link>
                 </div>
               ))}
               <div 
