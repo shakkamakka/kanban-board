@@ -1,5 +1,5 @@
 import {useState} from 'react'
-import { TiTicket } from "react-icons/ti";
+import { AiOutlinePlus } from "react-icons/ai";
 import FormCreate from './FormCreate';
 import Modal from './Modal';
 
@@ -9,7 +9,7 @@ const ModalCreate = () => {
   return (
     <>
     <button className='btn_primary' onClick={()=>setIsModalOpen(true)}>
-      <TiTicket /> Add a new task
+      <AiOutlinePlus /> Add a new task
     </button>
     
     <Modal

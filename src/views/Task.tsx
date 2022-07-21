@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { TaskProps } from "../data/interface";
 import useFetch from "../hooks/useFetch";
 
@@ -37,6 +37,10 @@ const Task = () => {
         <h2>{data.title}</h2>
       </div>
       <div className="task__description">{data.description}</div>
+      <div className="task__footer">
+        <Link to="/" className="btn_secondary">Go Back</Link>
+        <button className="btn_secondary">Edit</button>
+      </div>
     </div>}
   </section>   
   )
