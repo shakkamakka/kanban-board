@@ -8,6 +8,9 @@ On which you are able to:
 - move tickets between the various columns in an interactive way, persisting across page refreshes.
 - share a direct link to the ticket.
 
+![image](src/assets/kanban-board.gif "image")
+
+
 **Stack**
 
 - React ^18.2.0(Vite boilerplate)
