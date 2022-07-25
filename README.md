@@ -10,7 +10,7 @@ On which you are able to:
 
 ![image](src/assets/kanban-board.gif "image")
 
-[demo](https://voluble-gumdrop-534720.netlify.app/)
+[demo on Netlify](https://voluble-gumdrop-534720.netlify.app/) ** note that editing the data will only work locally as we're using a fake (json-)server.
 
 **Stack**
 
