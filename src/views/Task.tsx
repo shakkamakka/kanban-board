@@ -1,8 +1,9 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState, useContext } from "react";
 import { Link, useParams } from "react-router-dom";
 import { TaskProps } from "../data/interface";
 import useFetch from "../hooks/useFetch";
 import {HiOutlineClipboardCheck, HiOutlineClipboardCopy} from "react-icons/hi";
+import {PathContext} from "../context/path";
 
 
 const Task = () => {  
@@ -12,13 +13,14 @@ const Task = () => {
   const urlRef=useRef<HTMLInputElement>(null);
   const url=window.location.href;
   const [isCopied, setIsCopied] = useState(false);
+  const path = useContext(PathContext);
 
   // we take the whole status object because nested arrays aren't supported in JSON-server
   const {
     data:dataStatus,
     isLoading,
     error,
-  } = useFetch(`https://my-json-server.typicode.com/shakkamakka/kanban-board/status/${statusId}`);
+  } = useFetch(`${path}/${statusId}`);
 
   useEffect(()=>{
     if(isLoading)return;

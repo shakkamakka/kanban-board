@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { ListProps } from '../data/interface';
 import useFetch from '../hooks/useFetch';
 import { useNavigate } from 'react-router-dom';
+import {PathContext} from "../context/path";
 
 type props={
   isOpen:boolean,
@@ -9,10 +10,11 @@ type props={
 }
 
 const FormCreate = ({setIsModalOpen}:props ) => {
+  const path = useContext(PathContext);
   const navigate= useNavigate();
   const {
     data
-  } = useFetch(`https://my-json-server.typicode.com/shakkamakka/kanban-board/status`);
+  } = useFetch(`${path}`);
 
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
@@ -33,7 +35,7 @@ const FormCreate = ({setIsModalOpen}:props ) => {
     
 
     // post tasks array because json-server doesn't support nested objects
-    fetch(`https://my-json-server.typicode.com/shakkamakka/kanban-board/status/${statusId}`, {
+    fetch(`${path}/${statusId}`, {
       method:'PUT',
       headers:{ "Content-Type": "application/json" },
       body: JSON.stringify({

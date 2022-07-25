@@ -1,16 +1,18 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Row } from "../components";
 import { ListProps, TaskProps } from "../data/interface";
 import useFetch from "../hooks/useFetch";
 import { Link } from "react-router-dom";
-import {RiDeleteBin6Line} from "react-icons/ri"
+import {RiDeleteBin6Line} from "react-icons/ri";
+import {PathContext} from "../context/path";
 
 const Board = () => {
+  const path = useContext(PathContext);
   const {
     data,
     isLoading,
     error,
-  } = useFetch("https://my-json-server.typicode.com/shakkamakka/kanban-board/status");
+  } = useFetch(path);
 
   const [dataList, setDataList] = useState<ListProps []>([]);
   const [dragCardObject, setDragCardObject] = useState<TaskProps []>([]);
@@ -24,7 +26,7 @@ const Board = () => {
   const updateDB = (newdata:ListProps[]) => {
     //json-server can only update 1 item per call so we loop through the object
     newdata.map((list:ListProps)=>{
-      fetch(`https://my-json-server.typicode.com/shakkamakka/kanban-board/status/${list.id}`,{
+      fetch(`${path}/${list.id}`,{
         method:'PUT',
         headers:{ "Content-Type": "application/json" },
         body: JSON.stringify({
