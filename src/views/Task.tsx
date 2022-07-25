@@ -18,7 +18,7 @@ const Task = () => {
     data:dataStatus,
     isLoading,
     error,
-  } = useFetch(`http://localhost:3000/status/${statusId}`);
+  } = useFetch(`https://my-json-server.typicode.com/shakkamakka/kanban-board/status/${statusId}`);
 
   useEffect(()=>{
     if(isLoading)return;

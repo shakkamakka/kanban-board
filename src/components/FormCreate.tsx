@@ -33,7 +33,7 @@ const FormCreate = ({setIsModalOpen}:props ) => {
     
 
     // post tasks array because json-server doesn't support nested objects
-    fetch(`http://localhost:3000/status/${statusId}`, {
+    fetch(`https://my-json-server.typicode.com/shakkamakka/kanban-board/status/${statusId}`, {
       method:'PUT',
       headers:{ "Content-Type": "application/json" },
       body: JSON.stringify({

@@ -24,7 +24,7 @@ const Board = () => {
   const updateDB = (newdata:ListProps[]) => {
     //json-server can only update 1 item per call so we loop through the object
     newdata.map((list:ListProps)=>{
-      fetch(`http://localhost:3000/status/${list.id}`,{
+      fetch(`https://my-json-server.typicode.com/shakkamakka/kanban-board/status/${list.id}`,{
         method:'PUT',
         headers:{ "Content-Type": "application/json" },
         body: JSON.stringify({
