@@ -10,6 +10,7 @@ On which you are able to:
 
 ![image](src/assets/kanban-board.gif "image")
 
+[demo](https://voluble-gumdrop-534720.netlify.app/)
 
 **Stack**
 

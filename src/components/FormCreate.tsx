@@ -12,7 +12,7 @@ const FormCreate = ({setIsModalOpen}:props ) => {
   const navigate= useNavigate();
   const {
     data
-  } = useFetch(`http://localhost:3000/status`);
+  } = useFetch(`https://my-json-server.typicode.com/shakkamakka/kanban-board/status`);
 
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");

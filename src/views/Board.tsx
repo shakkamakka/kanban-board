@@ -10,7 +10,7 @@ const Board = () => {
     data,
     isLoading,
     error,
-  } = useFetch("http://localhost:3000/status");
+  } = useFetch("https://my-json-server.typicode.com/shakkamakka/kanban-board/status");
 
   const [dataList, setDataList] = useState<ListProps []>([]);
   const [dragCardObject, setDragCardObject] = useState<TaskProps []>([]);
