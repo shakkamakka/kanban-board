@@ -1,25 +1,29 @@
-import React, { useContext, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { ListProps } from '../data/interface';
-import useFetch from '../hooks/useFetch';
 import { useNavigate } from 'react-router-dom';
-import {PathContext} from "../context/path";
+import useLocalStorage from '../hooks/useLocalStorage';
+import dummydata from "../data/db.json";
 
 type props={
   isOpen:boolean,
-  setIsModalOpen:(isOpen:boolean)=>void
+  setIsModalOpen:(isOpen:boolean)=>void, 
+  statusIdParent?:number
 }
 
-const FormCreate = ({setIsModalOpen}:props ) => {
-  const path = useContext(PathContext);
+const FormCreate = ({setIsModalOpen, statusIdParent}:props ) => {
   const navigate= useNavigate();
-  const {
-    data
-  } = useFetch(`${path}`);
+  const [localData, setLocalData] = useLocalStorage<ListProps []>( "kanban", []);
+  
+  useEffect(()=>{
+    // populate from db.json if no localstorage was detected 
+    if(!window.localStorage.getItem("kanban")){
+      setLocalData(Object.values(dummydata)[0]);
+    }
+  }, [localData])
 
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
-  const [statusId, setStatusId] = useState<number>(1);
-  const [statusString, setStatusString] = useState<string | undefined>("Backlog");
+  const [statusId, setStatusId] = useState<number>(statusIdParent || 1);
   const [isPending, setIsPending] = useState(false);
 
   const handleSubmitted=(e:React.FormEvent)=>{
@@ -29,29 +33,23 @@ const FormCreate = ({setIsModalOpen}:props ) => {
 
     setIsPending(true);
 
-    // push task
-    const newData = data.filter((status:ListProps)=>status.id === statusId)[0].tasks;
-    newData.push(task);
-    
-
-    // post tasks array because json-server doesn't support nested objects
-    fetch(`${path}/${statusId}`, {
-      method:'PUT',
-      headers:{ "Content-Type": "application/json" },
-      body: JSON.stringify({
-        "value":statusString, // add this again, otherwise it dissapears somehow
-        "tasks":newData
-      })
-    }).then(()=>{
-      setIsPending(false);
-      setIsModalOpen(false);
-      if(location.pathname==='/'){
-        window.location.reload();
+    // push the new task
+    const newData = localData.map(status=>{
+      if(status.id===statusId){
+        status.tasks.push(task);
       }
-      else{
-        navigate('/');
-      }
+      return status;
     })
+
+    setLocalData(newData);
+    setIsPending(false);
+    setIsModalOpen(false);
+    if(location.pathname==='/'){
+      window.location.reload();
+    }
+    else{
+      navigate('/');
+    }
   }
 
   return (
@@ -73,12 +71,9 @@ const FormCreate = ({setIsModalOpen}:props ) => {
         <label>Status</label>
         <select 
           value={statusId}          
-          onChange={((e)=>{
-            setStatusString(e.target.options[e.target.selectedIndex].dataset.name);
-            setStatusId(Number(e.target.value));
-          })}
+          onChange={((e)=> setStatusId(Number(e.target.value)))}
         >
-          {data && data.map(({id, value}:ListProps)=><option key={id} value={id} data-name={value}>{value}</option>)}
+          {localData && localData.map(({id, value}:ListProps)=><option key={id} value={id} data-name={value}>{value}</option>)}
         </select>
         <br />
         {!isPending && <button type="submit" className='btn_primary center'>Add Task</button>}

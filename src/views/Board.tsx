@@ -1,42 +1,27 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Row } from "../components";
 import { ListProps, TaskProps } from "../data/interface";
-import useFetch from "../hooks/useFetch";
 import { Link } from "react-router-dom";
 import {RiDeleteBin6Line} from "react-icons/ri";
-import {PathContext} from "../context/path";
+import useLocalStorage from "../hooks/useLocalStorage";
+import dummydata from "../data/db.json";
 
 const Board = () => {
-  const path = useContext(PathContext);
-  const {
-    data,
-    isLoading,
-    error,
-  } = useFetch(path);
-
   const [dataList, setDataList] = useState<ListProps []>([]);
   const [dragCardObject, setDragCardObject] = useState<TaskProps []>([]);
   const [dragCardId, setDragCardId] = useState<Number>(0);
   const [touchCardId, setTouchCardId] = useState<Number>(0);
+  const [localData, setLocalData] = useLocalStorage<ListProps []>( "kanban", []);
   
   useEffect(()=>{
-    setDataList(data);
-  }, [data])
-
-  const updateDB = (newdata:ListProps[]) => {
-    //json-server can only update 1 item per call so we loop through the object
-    newdata.map((list:ListProps)=>{
-      fetch(`${path}/${list.id}`,{
-        method:'PUT',
-        headers:{ "Content-Type": "application/json" },
-        body: JSON.stringify({
-          "value":list.value,
-          "tasks":list.tasks
-        })
-      })
-    });
-    setDataList(newdata);
-  }
+    // populate from db.json if no localstorage was detected 
+    if(!window.localStorage.getItem("kanban")){
+      setLocalData(Object.values(dummydata)[0]);
+    }
+    else{
+      setDataList(localData);
+    }
+  }, [localData])
 
   const handleDragStart= (e:React.DragEvent, id:Number)=>{
       const cardObject = dataList.filter((list:ListProps)=> list.tasks.some(task=>task.id === id))[0].tasks.filter((task:TaskProps)=> task.id===id);
@@ -77,20 +62,17 @@ const Board = () => {
   const handleOnDropCard = () =>{
     setDragCardId(0);
     setTouchCardId(0);
-    updateDB(dataList);
+    setLocalData(dataList);
   }
 
   const handleDelete = (id:number) =>{
-    const newData = dataList.map((list:ListProps) => ({ ...list, "tasks": list.tasks.filter((task:TaskProps)=>task.id!==id)}));
-    updateDB(newData);
+    const newData = dataList?.map((list:ListProps) => ({ ...list, "tasks": list.tasks.filter((task:TaskProps)=>task.id!==id)}));
+    setLocalData(newData);
   }
 
   return (
     <div className="dashboard">
       <Row>
-        {isLoading && <div>loading...</div>}
-        {error && <div>{error}</div>}
-
         {dataList &&
           dataList.map((s: ListProps, statusIndex:number) => (
             // Column
