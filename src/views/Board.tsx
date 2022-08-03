@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { ModalEdit, Row } from "../components";
 import { ListProps, TaskProps } from "../data/interface";
-import { Link } from "react-router-dom";
 import {RiDeleteBin6Line} from "react-icons/ri";
 import useLocalStorage from "../hooks/useLocalStorage";
 import dummydata from "../data/db.json";
@@ -113,7 +112,6 @@ const Board = () => {
                   </div>
 
                   <span className="card__description">{description?.substring(0, 50)}...</span>
-                  <Link to={`/task/${s.id}/${id}`} draggable={false}>View details </Link>
                 </div>
               ))}
               <div 
