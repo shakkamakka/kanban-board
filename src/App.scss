@@ -27,12 +27,15 @@ $borderRadius: 0.5rem;
 	border: none;
 	font-family: $font2;
 	font-size: 1.6rem;
+	text-transform: uppercase;
+	letter-spacing: 1px;
 	padding: 0.1rem 2rem;
 	border-radius: $borderRadius;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
 	width: auto;
+	min-height: 4rem;
 	cursor: pointer;
 	& svg {
 		margin-right: 1rem;
@@ -284,13 +287,23 @@ h3 {
 	color: $gray400;
 	background-color: white;
 }
-form.create {
+form.modalform {
 	display: flex;
 	flex-direction: column;
 	text-align: left;
 	width: 100%;
+	.modalform__footer {
+		display: flex;
+		width: 100%;
+		justify-content: space-between;
+	}
 	h2 {
-		text-align: center;
+		display: flex;
+		align-items: center;
+		svg {
+			margin-right: 1rem;
+			font-size: 1.8rem;
+		}
 	}
 	label {
 		margin-top: 2rem;
@@ -300,6 +313,7 @@ form.create {
 	}
 	textarea {
 		@include formstyles;
+		min-height: auto;
 	}
 	select {
 		@include formstyles;

@@ -3,22 +3,21 @@ import { ListProps } from '../data/interface';
 import { useNavigate } from 'react-router-dom';
 import useLocalStorage from '../hooks/useLocalStorage';
 import dummydata from "../data/db.json";
+import { MdLibraryAdd } from "react-icons/md";
 
 type props={
   isOpen:boolean,
   setIsModalOpen:(isOpen:boolean)=>void, 
-  statusIdParent?:number
+  statusIdParent:number
 }
 
 const FormCreate = ({setIsModalOpen, statusIdParent}:props ) => {
   const navigate= useNavigate();
   const [localData, setLocalData] = useLocalStorage<ListProps []>( "kanban", []);
+  const [data, setData] = useState<ListProps []>([]);
   
   useEffect(()=>{
-    // populate from db.json if no localstorage was detected 
-    if(!window.localStorage.getItem("kanban")){
-      setLocalData(Object.values(dummydata)[0]);
-    }
+    setData(localData);
   }, [localData])
 
   const [title, setTitle] = useState("");
@@ -44,6 +43,7 @@ const FormCreate = ({setIsModalOpen, statusIdParent}:props ) => {
     setLocalData(newData);
     setIsPending(false);
     setIsModalOpen(false);
+
     if(location.pathname==='/'){
       window.location.reload();
     }
@@ -53,8 +53,8 @@ const FormCreate = ({setIsModalOpen, statusIdParent}:props ) => {
   }
 
   return (
-      <form className="create" onSubmit={(e)=>handleSubmitted(e)}>
-        <h2>Create a new Task</h2>
+      <form className="modalform" onSubmit={(e)=>handleSubmitted(e)}>
+        <h2><MdLibraryAdd />Create a new Task</h2>
         <label>Title</label>
         <input
           type="text"
@@ -73,7 +73,7 @@ const FormCreate = ({setIsModalOpen, statusIdParent}:props ) => {
           value={statusId}          
           onChange={((e)=> setStatusId(Number(e.target.value)))}
         >
-          {localData && localData.map(({id, value}:ListProps)=><option key={id} value={id} data-name={value}>{value}</option>)}
+          {data && data.map(({id, value}:ListProps)=><option key={id} value={id} data-name={value}>{value}</option>)}
         </select>
         <br />
         {!isPending && <button type="submit" className='btn_primary center'>Add Task</button>}

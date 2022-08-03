@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Row } from "../components";
+import { ModalEdit, Row } from "../components";
 import { ListProps, TaskProps } from "../data/interface";
 import { Link } from "react-router-dom";
 import {RiDeleteBin6Line} from "react-icons/ri";
@@ -9,27 +9,28 @@ import dummydata from "../data/db.json";
 const Board = () => {
   const [dataList, setDataList] = useState<ListProps []>([]);
   const [dragCardObject, setDragCardObject] = useState<TaskProps []>([]);
-  const [dragCardId, setDragCardId] = useState<Number>(0);
-  const [touchCardId, setTouchCardId] = useState<Number>(0);
+  const [dragCardId, setDragCardId] = useState<number>(0);
+  const [touchCardId, setTouchCardId] = useState<number>(0);
   const [localData, setLocalData] = useLocalStorage<ListProps []>( "kanban", []);
+  const [editId, setEditId] = useState<number>(0);
+  const [IsEditOpen, setIsEditOpen] = useState<boolean>(false);
   
   useEffect(()=>{
     // populate from db.json if no localstorage was detected 
     if(!window.localStorage.getItem("kanban")){
       setLocalData(Object.values(dummydata)[0]);
     }
-    else{
-      setDataList(localData);
-    }
+    setDataList(localData);
   }, [localData])
 
-  const handleDragStart= (e:React.DragEvent, id:Number)=>{
+  const handleDragStart= (e:React.DragEvent, id:number)=>{
+    // save the cardObject to push it to the list later
       const cardObject = dataList.filter((list:ListProps)=> list.tasks.some(task=>task.id === id))[0].tasks.filter((task:TaskProps)=> task.id===id);
       setDragCardId(id);
       setDragCardObject(cardObject);
   }
 
-  const handleDragOverCard = (e:React.DragEvent, id:Number, index:number, statusId:number, statusIndex:number) =>{
+  const handleDragOverCard = (e:React.DragEvent, id:number, index:number, statusId:number, statusIndex:number) =>{
     e.preventDefault();
     // return when hovering over same card
     // return when hovering over new card and its not the filler card
@@ -72,6 +73,11 @@ const Board = () => {
 
   return (
     <div className="dashboard">
+      {IsEditOpen && <ModalEdit 
+        taskId={editId} 
+        setIsEditOpen={setIsEditOpen} 
+        isEditOpen={IsEditOpen} 
+      />}
       <Row>
         {dataList &&
           dataList.map((s: ListProps, statusIndex:number) => (
@@ -96,6 +102,10 @@ const Board = () => {
                 onDragOver={(e)=>handleDragOverCard(e, id, index, s.id, statusIndex)}
                 onDragLeave={()=> setTouchCardId(0)}
                 onDrop={()=>handleOnDropCard()}
+                onDoubleClick={()=>{
+                  setIsEditOpen(true);
+                  setEditId(id)
+                }}
                 >
                   <div className="card-header">
                     <span className="card__title">{title} </span>

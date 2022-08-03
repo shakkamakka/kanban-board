@@ -3,7 +3,11 @@ import { AiOutlinePlus } from "react-icons/ai";
 import FormCreate from './FormCreate';
 import Modal from './Modal';
 
-const ModalCreate = (statusIdParent?:number) => {
+type props={
+  statusIdParent:number
+}
+
+const ModalCreate = ({statusIdParent}:props) => {
   const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
 
   return (
@@ -16,11 +20,12 @@ const ModalCreate = (statusIdParent?:number) => {
       isOpen={isModalOpen}
       setIsOpen={setIsModalOpen}
     >
-      <FormCreate 
+      {isModalOpen &&  <FormCreate 
         isOpen={isModalOpen} 
         setIsModalOpen={setIsModalOpen} 
         statusIdParent={statusIdParent} 
       />
+      }
     </Modal>
     </>
   )

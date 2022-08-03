@@ -7,7 +7,7 @@ const Nav = () => {
       <Link to="/">
         <h1>kanban board</h1>
       </Link>
-      <ModalCreate />
+      <ModalCreate statusIdParent={0} />
     </nav>
   );
 };
