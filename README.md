@@ -1,16 +1,19 @@
 # Kanban Board
 
 A minimal Kanban board on which you can create, view and move tickets between columns.
+The data will be saved locally in your browser thanks to HTML5 localstorage.
 
-On which you are able to:
-
-- create tickets on the board.
-- move tickets between the various columns in an interactive way, persisting across page refreshes.
-- share a direct link to the ticket.
 
 ![image](src/assets/kanban-board.gif "image")
 
 [demo on Netlify](https://voluble-gumdrop-534720.netlify.app/) ** note that editing the data will only work locally as we're using a fake (json-)server.
+
+**How to use**
+- On first use, some dummy data will be loaded into the tickets on the board and onto your browser.
+- You can edit a ticket by doubleclicking the card, this will open an editable form which you can save.
+- You can drag a ticket from one to another column
+- You can delete a ticket by clicking on the bin icon in the right corner
+- You can add as many tickets as you want!
 
 **Stack**
 
@@ -27,5 +30,4 @@ After downloading the repository you can open the terminal at the root of the re
 - npm install
 - npm start
 
-This will start both json-server and the react scripts.
 The application will run in localhost on port 5173 [http://localhost:5173/](http://localhost:5173/)
