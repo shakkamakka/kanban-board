@@ -6,7 +6,7 @@ The data will be saved locally in your browser thanks to HTML5 localstorage.
 
 ![image](src/assets/kanban-board.gif "image")
 
-[demo on Netlify](https://voluble-gumdrop-534720.netlify.app/) ** note that editing the data will only work locally as we're using a fake (json-)server.
+[demo on Netlify](https://voluble-gumdrop-534720.netlify.app/)
 
 **How to use**
 - On first use, some dummy data will be loaded into the tickets on the board and onto your browser.
