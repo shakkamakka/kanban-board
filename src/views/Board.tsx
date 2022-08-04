@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
-import { ModalEdit, Row } from "../components";
+import { Card, ModalEdit, Row } from "../components";
 import { ListProps, TaskProps } from "../data/interface";
-import {RiDeleteBin6Line} from "react-icons/ri";
 import useLocalStorage from "../hooks/useLocalStorage";
 import dummydata from "../data/db.json";
 
@@ -106,12 +105,12 @@ const Board = () => {
                   setEditId(id)
                 }}
                 >
-                  <div className="card-header">
-                    <span className="card__title">{title} </span>
-                    <button className="card__delete" onClick={()=>handleDelete(id)}><RiDeleteBin6Line /></button>
-                  </div>
-
-                  <span className="card__description">{description?.substring(0, 50)}...</span>
+                 <Card 
+                  title={title} 
+                  description={description} 
+                  id={id}
+                  handleDelete={handleDelete}
+                  />
                 </div>
               ))}
               <div 
